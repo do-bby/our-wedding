@@ -37,7 +37,7 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
 
         <div className="invitation-body">
           <p>
-            따뜻한 봄날,
+            초록이 짙어가는 여름날,
             <br />
             서로의 손을 맞잡고
             <br />
@@ -59,10 +59,10 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
 
         <div className="invitation-family">
           <div className="family-line">
-            김영수 · 박미경의 장남 <b>김민준</b>
+            박태식 · 성숙진의 아들 <b>박윤수</b>
           </div>
           <div className="family-line">
-            이정호 · 최은주의 장녀 <b>이서연</b>
+            김대홍 · 김미경의 딸 <b>김서현</b>
           </div>
         </div>
 
@@ -81,30 +81,16 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
           <div className="contact-grid">
             <div className="contact-card">
               <div className="contact-role">신랑</div>
-              <div className="contact-name">김민준</div>
-              <a className="contact-link" href="tel:010-3333-4444">
-                010-3333-4444
+              <div className="contact-name">박윤수</div>
+              <a className="contact-link" href="tel:010-2217-9743">
+                010-2217-9743
               </a>
             </div>
             <div className="contact-card">
               <div className="contact-role">신부</div>
-              <div className="contact-name">이서연</div>
-              <a className="contact-link" href="tel:010-9876-5432">
-                010-9876-5432
-              </a>
-            </div>
-            <div className="contact-card">
-              <div className="contact-role">혼주</div>
-              <div className="contact-name">김영수</div>
-              <a className="contact-link" href="tel:010-5555-6666">
-                010-5555-6666
-              </a>
-            </div>
-            <div className="contact-card">
-              <div className="contact-role">혼주</div>
-              <div className="contact-name">이정호</div>
-              <a className="contact-link" href="tel:010-1111-2222">
-                010-1111-2222
+              <div className="contact-name">김서현</div>
+              <a className="contact-link" href="tel:010-2743-0705">
+                010-2743-0705
               </a>
             </div>
           </div>
@@ -112,7 +98,7 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
 
         <div className="invitation-footer">
           <div>2026년 8월 29일 토요일 오후 1시 40분</div>
-          <div>대구 파라다이스 웨딩컨벤션 그랜드홀</div>
+          <div>경기도 광명시 양지로 17 아이벡스 컨벤션</div>
         </div>
       </motion.div>
     </section>

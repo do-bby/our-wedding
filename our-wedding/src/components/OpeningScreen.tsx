@@ -32,8 +32,7 @@ export default function OpeningScreen({ accepted, onAccept }: OpeningScreenProps
         animate={{ opacity: 1 }}
         transition={sectionTransition}
       >
-        <div className="opening-line">Our Wedding</div>
-        <div className="opening-sub">Mobile Invitation</div>
+        <div className="opening-line">Our Wedding</div>        
       </motion.div>
 
       <motion.div

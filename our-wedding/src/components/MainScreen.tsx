@@ -69,7 +69,7 @@ export default function MainScreen() {
         aria-hidden={isUnlocked}
       >
         <div className="lockscreen-inner" style={{ backgroundImage: `url(${coverImage})` }}>
-          <div className="lockscreen-date">8월 29일</div>
+          <div className="lockscreen-date">8월 29일 (토)</div>
           <div className="lockscreen-time">13:40</div>
 {/* 
           <div className="lockscreen-hint">아래로 스크롤해 잠금해제</div> */}
