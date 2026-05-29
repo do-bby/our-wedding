@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
+import './ProfileSection.css'
 
 type ProfileSectionProps = {
   id?: string

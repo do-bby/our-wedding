@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
+import './HeroSection.css'
 
 type HeroSectionProps = {
   id?: string

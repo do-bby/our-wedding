@@ -1,0 +1,40 @@
+.section.hero {
+  padding-top: 22px;
+}
+
+.hero-card {
+  padding: 30px 20px;
+  background:
+    radial-gradient(520px 320px at 100% 0%, rgba(101, 215, 255, 0.28), transparent
+        65%),
+    rgba(255, 255, 255, 0.72);
+}
+
+.hero-kicker {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero-title {
+  font-size: 44px;
+  line-height: 112%;
+  margin-top: 12px;
+}
+
+.hero-sub {
+  margin-top: 14px;
+  color: var(--text);
+}
+
+.hero-hint {
+  margin-top: 18px;
+  display: inline-flex;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--muted);
+  font-size: 13px;
+}

@@ -1,0 +1,33 @@
+.profiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.profile {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  padding: 16px 14px;
+  text-align: center;
+}
+
+.profile-avatar {
+  height: 64px;
+  width: 64px;
+  border-radius: 18px;
+  margin: 0 auto 12px;
+  background: linear-gradient(135deg, rgba(27, 127, 255, 0.25), rgba(101, 215, 255, 0.25));
+  border: 1px solid rgba(27, 127, 255, 0.22);
+}
+
+.profile-name {
+  font-family: var(--serif);
+  color: var(--text-strong);
+}
+
+.profile-role {
+  font-size: 13px;
+  margin-top: 4px;
+  color: var(--muted);
+}

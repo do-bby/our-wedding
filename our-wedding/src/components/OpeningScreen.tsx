@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
+import airDropImage from '../images/airDrop.png'
+import './OpeningScreen.css'
 
 type OpeningScreenProps = {
   accepted: boolean
@@ -43,26 +45,24 @@ export default function OpeningScreen({ accepted, onAccept }: OpeningScreenProps
         aria-label="AirDrop"
       >
         <div className="airdrop-header">AirDrop</div>
-        <div className="airdrop-body">
-          <div className="airdrop-avatar" aria-hidden="true" />
-          <div className="airdrop-text">
-            <div className="airdrop-title">Wedding Invitation</div>
-            <div className="airdrop-meta">From: Someone Nearby</div>
-          </div>
+        <div className="airdrop-message">💞 웨딩 초대장이 도착했어요.</div>
+        <div className="airdrop-preview" aria-hidden="true">
+          <img className="airdrop-preview-img" src={airDropImage} alt="" />
         </div>
         <div className="airdrop-actions">
           <button
             type="button"
-            className="btn ghost"
+            className="airdrop-action"
             onClick={() => setShowAirdrop(false)}
           >
             Decline
           </button>
-          <button type="button" className="btn primary" onClick={onAccept}>
+          <button type="button" className="airdrop-action" onClick={onAccept}>
             Accept
           </button>
         </div>
       </motion.div>
+
     </div>
   )
 }

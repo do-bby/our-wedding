@@ -1,0 +1,133 @@
+.section-title {
+  font-size: 22px;
+  line-height: 120%;
+  margin-bottom: 12px;
+}
+
+.body {
+  color: var(--text);
+}
+
+.card.invitation {
+  padding: 34px 22px;
+  text-align: center;
+}
+
+.invitation-head {
+  display: grid;
+  gap: 6px;
+}
+
+.invitation-kicker {
+  font-size: 12px;
+  letter-spacing: 0.26em;
+  color: rgba(15, 18, 24, 0.62);
+}
+
+.invitation-sub {
+  font-size: 13px;
+  color: rgba(15, 18, 24, 0.52);
+}
+
+.invitation-body {
+  margin-top: 34px;
+  display: grid;
+  gap: 18px;
+  color: rgba(15, 18, 24, 0.72);
+  font-size: 14px;
+  line-height: 190%;
+}
+
+.invitation-body p {
+  margin: 0;
+}
+
+.invitation-family {
+  margin-top: 40px;
+  display: grid;
+  gap: 10px;
+  color: rgba(15, 18, 24, 0.64);
+  font-size: 13px;
+}
+
+.family-line b {
+  color: rgba(15, 18, 24, 0.92);
+  font-weight: 650;
+}
+
+.phone-fab {
+  margin: 26px auto 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(15, 18, 24, 0.08);
+  display: grid;
+  place-items: center;
+}
+
+.phone-fab::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(15, 18, 24, 0.34);
+  -webkit-mask: radial-gradient(circle at 50% 50%, #000 70%, transparent 71%);
+  mask: radial-gradient(circle at 50% 50%, #000 70%, transparent 71%);
+}
+
+.phone-fab:focus-visible {
+  outline: 2px solid rgba(101, 215, 255, 0.8);
+  outline-offset: 2px;
+}
+
+.contact-panel {
+  margin-top: 18px;
+  display: none;
+}
+
+.contact-panel.is-open {
+  display: block;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.contact-card {
+  border: 1px solid rgba(15, 18, 24, 0.08);
+  background: rgba(255, 255, 255, 0.62);
+  border-radius: 14px;
+  padding: 12px 12px;
+  text-align: left;
+}
+
+.contact-role {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: rgba(15, 18, 24, 0.45);
+}
+
+.contact-name {
+  margin-top: 6px;
+  font-weight: 650;
+  color: rgba(15, 18, 24, 0.92);
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(27, 127, 255, 0.92);
+  text-decoration: none;
+}
+
+.invitation-footer {
+  margin-top: 28px;
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(15, 18, 24, 0.52);
+}
