@@ -2,6 +2,8 @@ import HeroSection from './sections/HeroSection'
 import WordingSection from './sections/WordingSection'
 import CalendarSection from './sections/CalendarSection'
 import ProfileSection from './sections/ProfileSection'
+import LocationSection from './sections/LocationSection'
+import AccountSection from './sections/AccountSection'
 import TimelineSection from './sections/TimelineSection'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import coverImage from '../images/cover.png'
@@ -91,6 +93,8 @@ export default function MainScreen() {
         <WordingSection />
         <CalendarSection />
         <ProfileSection />
+        <LocationSection />
+        <AccountSection />
         <TimelineSection />
 
         <footer className="footer">© Our Wedding</footer>

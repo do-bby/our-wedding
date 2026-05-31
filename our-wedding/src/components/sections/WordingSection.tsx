@@ -1,5 +1,4 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { useState } from 'react'
 import './WordingSection.css'
 
 type WordingSectionProps = {
@@ -8,7 +7,7 @@ type WordingSectionProps = {
 
 export default function WordingSection({ id = 'wording' }: WordingSectionProps) {
   const prefersReducedMotion = useReducedMotion()
-  const [showContacts, setShowContacts] = useState(false)
+  
 
   const softEase = [0.22, 1, 0.36, 1] as const
   const sectionTransition = prefersReducedMotion
@@ -66,7 +65,7 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
           </div>
         </div>
 
-        <button
+        {/* <button
           type="button"
           className="phone-fab"
           aria-expanded={showContacts}
@@ -94,12 +93,12 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="invitation-footer">
+        {/* <div className="invitation-footer">
           <div>2026년 8월 29일 토요일 오후 1시 40분</div>
           <div>경기도 광명시 양지로 17 아이벡스 컨벤션</div>
-        </div>
+        </div> */}
       </motion.div>
     </section>
   )

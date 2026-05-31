@@ -32,7 +32,7 @@ export default function OpeningScreen({ accepted, onAccept }: OpeningScreenProps
         animate={{ opacity: 1 }}
         transition={sectionTransition}
       >
-        <div className="opening-line">Our Wedding</div>        
+        <div className="opening-line">💍 Our Wedding </div>        
       </motion.div>
 
       <motion.div
@@ -44,7 +44,7 @@ export default function OpeningScreen({ accepted, onAccept }: OpeningScreenProps
         aria-label="AirDrop"
       >
         <div className="airdrop-header">AirDrop</div>
-        <div className="airdrop-message">💞 웨딩 초대장이 도착했어요.</div>
+        <div className="airdrop-message">🌻 윤수 그리고 서현의 결혼식에 초대합니다. 🌻</div>
         <div className="airdrop-preview" aria-hidden="true">
           <img className="airdrop-preview-img" src={airDropImage} alt="" />
         </div>
@@ -54,10 +54,10 @@ export default function OpeningScreen({ accepted, onAccept }: OpeningScreenProps
             className="airdrop-action"
             onClick={() => setShowAirdrop(false)}
           >
-            Decline
+            거절
           </button>
           <button type="button" className="airdrop-action" onClick={onAccept}>
-            Accept
+            수락
           </button>
         </div>
       </motion.div>

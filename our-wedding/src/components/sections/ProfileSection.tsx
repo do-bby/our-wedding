@@ -1,4 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
+import seohyunImage from '../../images/seohyun.png'
+import yoonsooImage from '../../images/yoonsoo.png'
 import './ProfileSection.css'
 
 type ProfileSectionProps = {
@@ -31,14 +33,14 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
         <h2 className="section-title">About Us</h2>
         <div className="profiles">
           <div className="profile">
-            <div className="profile-avatar" aria-hidden="true" />
+            <img className="profile-avatar" src={yoonsooImage} alt="신랑 윤수" />
             <div className="profile-name">Groom</div>
-            <div className="profile-role">신랑</div>
+            <div className="profile-role">윤수</div>
           </div>
           <div className="profile">
-            <div className="profile-avatar" aria-hidden="true" />
+            <img className="profile-avatar" src={seohyunImage} alt="신부 서현" />
             <div className="profile-name">Bride</div>
-            <div className="profile-role">신부</div>
+            <div className="profile-role">서현</div>
           </div>
         </div>
       </motion.div>

@@ -1,0 +1,84 @@
+.account-card {
+  padding: 34px 22px;
+}
+
+.account-head {
+  display: grid;
+  gap: 6px;
+  text-align: center;
+}
+
+.account-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(15, 18, 24, 0.82);
+}
+
+.account-sub {
+  font-size: 13px;
+  color: rgba(15, 18, 24, 0.52);
+}
+
+.account-list {
+  margin-top: 42px;
+  display: grid;
+  gap: 12px;
+}
+
+.account-item {
+  overflow: hidden;
+  border-radius: 13px;
+  background: rgba(15, 18, 24, 0.035);
+}
+
+.account-toggle {
+  width: 100%;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 0;
+  padding: 0 16px;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  color: rgba(15, 18, 24, 0.58);
+}
+
+.account-chevron {
+  display: inline-block;
+  color: rgba(15, 18, 24, 0.45);
+  transform: translateY(-1px);
+}
+
+.account-chevron.is-open {
+  transform: translateY(1px) rotate(180deg);
+}
+
+.account-panel {
+  display: grid;
+  gap: 10px;
+  padding: 4px 18px 18px;
+  font-size: 13px;
+  color: rgba(15, 18, 24, 0.68);
+}
+
+.account-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.account-label {
+  flex: 0 0 auto;
+  font-weight: 650;
+  color: rgba(15, 18, 24, 0.78);
+}
+
+.account-phone {
+  color: rgba(61, 134, 208, 0.95);
+  text-decoration: none;
+}

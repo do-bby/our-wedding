@@ -17,17 +17,23 @@
   width: 64px;
   border-radius: 18px;
   margin: 0 auto 12px;
+  display: block;
+  object-fit: cover;
   background: linear-gradient(135deg, rgba(27, 127, 255, 0.25), rgba(101, 215, 255, 0.25));
   border: 1px solid rgba(27, 127, 255, 0.22);
 }
 
 .profile-name {
-  font-family: var(--serif);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 650;
   color: var(--text-strong);
 }
 
 .profile-role {
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 500;
   margin-top: 4px;
+  letter-spacing: 0.12em;
   color: var(--muted);
 }

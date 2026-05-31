@@ -1,0 +1,262 @@
+.location-card {
+  padding: 34px 22px;
+}
+
+.location-head {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.location-pin-badge {
+  display: grid;
+  place-items: center;
+  color: rgba(61, 134, 208, 0.95);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.location-kicker {
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+  color: rgba(15, 18, 24, 0.86);
+}
+
+.location-sub {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 165%;
+  color: rgba(15, 18, 24, 0.56);
+}
+
+.location-place {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(61, 169, 226, 0.1);
+  color: rgba(61, 134, 208, 0.92);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.location-map {
+  position: relative;
+  height: 210px;
+  margin-top: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 18, 24, 0.08);
+  background:
+    linear-gradient(90deg, rgba(61, 169, 226, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(61, 169, 226, 0.06) 1px, transparent 1px),
+    linear-gradient(135deg, #f9fcff 0%, #edf8ff 48%, #fffaf0 100%);
+  background-size: 42px 42px, 42px 42px, auto;
+}
+
+.kakao-map-view {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+.location-map.has-kakao-map .kakao-map-view {
+  opacity: 1;
+}
+
+.location-map.has-kakao-map .map-road,
+.location-map.has-kakao-map .map-place,
+.location-map.has-kakao-map .map-pin {
+  display: none;
+}
+
+.map-road {
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0 0 1px rgba(15, 18, 24, 0.05);
+}
+
+.map-road.horizontal {
+  left: -24px;
+  right: -24px;
+  height: 18px;
+}
+
+.map-road.vertical {
+  top: -24px;
+  bottom: -24px;
+  width: 18px;
+}
+
+.map-road.top {
+  top: 38px;
+}
+
+.map-road.middle {
+  top: 104px;
+  transform: rotate(-6deg);
+}
+
+.map-road.bottom {
+  bottom: 32px;
+}
+
+.map-road.left {
+  left: 54px;
+  transform: rotate(4deg);
+}
+
+.map-road.center {
+  left: 145px;
+}
+
+.map-road.right {
+  right: 46px;
+  transform: rotate(-3deg);
+}
+
+.map-place {
+  position: absolute;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  color: rgba(15, 18, 24, 0.72);
+  font-size: 11px;
+  line-height: 1.25;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(15, 18, 24, 0.08);
+}
+
+.map-place.main {
+  left: 50%;
+  top: 82px;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: rgba(15, 18, 24, 0.86);
+}
+
+.map-place.station {
+  right: 18px;
+  bottom: 18px;
+  color: rgba(61, 169, 226, 0.9);
+  font-weight: 650;
+}
+
+.map-pin {
+  position: absolute;
+  left: 50%;
+  top: 94px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50% 50% 50% 0;
+  background: rgba(61, 134, 208, 0.96);
+  box-shadow: 0 12px 24px rgba(61, 134, 208, 0.34);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.map-pin::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.location-directions {
+  display: block;
+  width: 100%;
+  margin: 24px auto 0;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.map-link-title {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(15, 18, 24, 0.86);
+}
+
+.map-link-title::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(61, 169, 226, 0.92);
+  box-shadow: 0 0 0 5px rgba(61, 169, 226, 0.12);
+}
+
+.map-link-list {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.map-link {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  padding: 8px 6px 10px;
+  text-decoration: none;
+}
+
+.map-link-heart {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50% 50% 50% 0;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 10px 22px rgba(15, 18, 24, 0.08);
+  transform: rotate(-45deg);
+}
+
+.map-link-icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  object-fit: contain;
+  transform: rotate(45deg);
+}
+
+.location-info {
+  margin-top: 30px;
+  display: grid;
+  gap: 26px;
+}
+
+.location-row {
+  display: grid;
+  gap: 9px;
+}
+
+.location-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(15, 18, 24, 0.86);
+}
+
+.location-label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(61, 169, 226, 0.92);
+  box-shadow: 0 0 0 5px rgba(61, 169, 226, 0.12);
+}
+
+.location-text {
+  font-size: 14px;
+  line-height: 170%;
+  color: rgba(15, 18, 24, 0.56);
+}

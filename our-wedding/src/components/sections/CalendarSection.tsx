@@ -65,13 +65,13 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
         <div className="calendar-wrap">
           <div className="calendar-card" role="group" aria-label="Wedding Calendar">
             <div className="calendar-top">
-              <div className="calendar-top-left">{monthMatrix.year}</div>
-              <div className="calendar-top-center">WEDDING DAY</div>
-              <div className="calendar-top-right">+</div>
+              {/* <div className="calendar-top-center">{monthMatrix.year}</div> */}
+              <div className="calendar-top-center">{monthMatrix.year}년</div>
+              {/* <div className="calendar-top-right">+</div> */}
             </div>
 
             <div className="calendar-month">
-              {new Date(monthMatrix.year, monthMatrix.month, 1).toLocaleString('en-US', {
+              {new Date(monthMatrix.year, monthMatrix.month, 1).toLocaleString('ko-KR', {
                 month: 'long',
               })}
             </div>
@@ -96,7 +96,8 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
                     role="gridcell"
                     aria-selected={isTarget}
                   >
-                    {d}
+                    <span>{d}</span>
+                    {isTarget ? <span className="calendar-day-time">13:40</span> : null}
                   </div>
                 )
               })}

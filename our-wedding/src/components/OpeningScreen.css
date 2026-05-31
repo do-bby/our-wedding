@@ -11,13 +11,13 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(900px 420px at 50% 10%, rgba(101, 215, 255, 0.35), transparent
-        60%),
-    radial-gradient(820px 520px at 0% 10%, rgba(27, 127, 255, 0.18), transparent
-        65%),
-    #0b0e14;
-  opacity: 0.92;
-  filter: blur(12px);
+    radial-gradient(780px 460px at 78% 12%, rgba(255, 246, 174, 0.58), transparent
+        62%),
+    radial-gradient(860px 520px at 16% 18%, rgba(126, 220, 255, 0.5), transparent
+        64%),
+    linear-gradient(180deg, #dff8ff 0%, #bfefff 48%, #f8fff5 100%);
+  opacity: 1;
+  filter: blur(10px);
   transform: scale(1.08);
 }
 
@@ -25,14 +25,16 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.05)),
+    radial-gradient(520px 360px at 50% 100%, rgba(255, 255, 255, 0.42), transparent 70%);
 }
 
 .opening-title {
   position: relative;
   z-index: 1;
   text-align: center;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(61, 169, 226, 0.96);
   margin-bottom: 0;
   position: absolute;
   top: 64px;
@@ -90,7 +92,7 @@
 
 .airdrop-message {
   padding: 0 16px 12px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.3;
   color: rgba(15, 18, 24, 0.68);
   text-align: center;
