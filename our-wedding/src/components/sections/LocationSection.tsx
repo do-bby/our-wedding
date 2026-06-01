@@ -23,8 +23,8 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
   const kakaoMapKey = import.meta.env.VITE_KAKAO_MAP_APP_KEY
   const place = {
     name: '아이벡스 컨벤션',
-    lat: 37.416,
-    lng: 126.884,
+    lat: 37.4184626,
+    lng: 126.8826913,
   }
 
   const softEase = [0.22, 1, 0.36, 1] as const
@@ -41,12 +41,12 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
     {
       label: '티맵',
       image: tMapImage,
-      href: 'https://apis.openapi.sk.com/tmap/app/routes?appKey=&name=%EC%95%84%EC%9D%B4%EB%B2%A1%EC%8A%A4%20%EC%BB%A8%EB%B2%A4%EC%85%98&lon=126.884&lat=37.416',
+      href: `https://apis.openapi.sk.com/tmap/app/routes?appKey=&name=${encodeURIComponent(place.name)}&lon=${place.lng}&lat=${place.lat}`,
     },
     {
       label: '카카오맵',
       image: kakaoMapImage,
-      href: 'https://map.kakao.com/link/search/%EC%95%84%EC%9D%B4%EB%B2%A1%EC%8A%A4%20%EC%BB%A8%EB%B2%A4%EC%85%98',
+      href: `https://map.kakao.com/link/map/${encodeURIComponent(place.name)},${place.lat},${place.lng}`,
     },
     {
       label: '네이버지도',
