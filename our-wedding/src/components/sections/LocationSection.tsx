@@ -69,34 +69,19 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
       const marker = new window.kakao.maps.Marker({
         position: center,
       })
-      const infoWindow = new window.kakao.maps.InfoWindow({
+      marker.setMap(map)
+
+      const overlay = new window.kakao.maps.CustomOverlay({
+        position: center,
         content: `
-          <div
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 8px;
-              padding: 7px 12px;
-              font-size: 12px;
-              font-weight: 700;
-              letter-spacing: -0.1px;
-              line-height: 1;
-              white-space: nowrap;
-              color: rgba(15, 18, 24, 0.82);
-              background: rgba(255, 255, 255, 0.92);
-              border: 1px solid rgba(15, 18, 24, 0.10);
-              border-radius: 999px;
-              box-shadow: 0 8px 18px rgba(15, 18, 24, 0.12);
-              backdrop-filter: blur(6px);
-            "
-          >
-            <span style="width: 6px; height: 6px; border-radius: 999px; background: rgba(61, 169, 226, 0.92);"></span>
-            <span>${place.name}</span>
+          <div class="kakao-place-overlay">
+            <span class="kakao-place-dot" aria-hidden="true"></span>
+            <span class="kakao-place-text">${place.name}</span>
           </div>
         `,
+        yAnchor: 1.6,
       })
-      marker.setMap(map)
-      infoWindow.open(map, marker)
+      overlay.setMap(map)
       setIsKakaoMapReady(true)
     }
 
@@ -127,7 +112,7 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
   return (
     <section className="section" id={id}>
       <motion.div
-        className="card location-card"
+        className="location-card"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
