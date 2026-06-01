@@ -5,6 +5,7 @@
   display: grid;
   place-items: center;
   padding: 22px;
+  pointer-events: auto;
 }
 
 .opening-bg {
@@ -28,6 +29,15 @@
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.05)),
     radial-gradient(520px 360px at 50% 100%, rgba(255, 255, 255, 0.42), transparent 70%);
+}
+
+.opening-blur {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  pointer-events: none;
 }
 
 .opening-title {
@@ -81,6 +91,7 @@
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 24px 52px rgba(0, 0, 0, 0.42);
   overflow: hidden;
+  pointer-events: auto;
 }
 
 .airdrop-header {

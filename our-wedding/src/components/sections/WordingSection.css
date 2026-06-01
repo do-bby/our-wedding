@@ -4,6 +4,10 @@
   margin-bottom: 12px;
 }
 
+.wording-section {
+  margin-top: 70px;
+}
+
 .body {
   color: var(--text);
 }
@@ -30,12 +34,13 @@
 }
 
 .invitation-body {
-  margin-top: 34px;
+  margin: 26px auto 0;
+  max-width: 260px;
   display: grid;
   gap: 18px;
   color: rgba(15, 18, 24, 0.72);
   font-size: 14px;
-  line-height: 190%;
+  line-height: 180%;
 }
 
 .invitation-body p {
@@ -43,7 +48,8 @@
 }
 
 .invitation-family {
-  margin-top: 40px;
+  margin: 26px auto 0;
+  max-width: 280px;
   display: grid;
   gap: 10px;
   color: rgba(15, 18, 24, 0.64);

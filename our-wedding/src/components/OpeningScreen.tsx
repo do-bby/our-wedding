@@ -24,16 +24,7 @@ export default function OpeningScreen({ accepted, onAccept }: OpeningScreenProps
 
   return (
     <div className="opening" aria-hidden={accepted}>
-      <div className="opening-bg" />
-
-      <motion.div
-        className="opening-title"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={sectionTransition}
-      >
-        <div className="opening-line">💍 Our Wedding </div>        
-      </motion.div>
+      {showAirdrop && <div className="opening-blur" aria-hidden="true" />}
 
       <motion.div
         className="airdrop"

@@ -96,7 +96,7 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
                     role="gridcell"
                     aria-selected={isTarget}
                   >
-                    <span>{d}</span>
+                    <span className="calendar-day-number">{d}</span>
                     {isTarget ? <span className="calendar-day-time">13:40</span> : null}
                   </div>
                 )

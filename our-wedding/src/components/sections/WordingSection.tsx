@@ -20,13 +20,13 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
   } as const
 
   return (
-    <section className="section" id={id}>
+    <section className="section wording-section" id={id}>
       <motion.div
         className="card invitation"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.35 }}
+        viewport={{ once: true, amount: 0.05 }}
         transition={sectionTransition}
       >
         <div className="invitation-head">

@@ -10,14 +10,17 @@
 }
 
 .main-content {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
   transition: opacity 720ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.main-content.is-unlocked {
-  opacity: 1;
-  pointer-events: auto;
+.cover-section {
+  height: 100svh;
+  scroll-snap-align: start;
+}
+
+.cover-section .lockscreen-inner {
+  height: 100%;
 }
 
 .lockscreen-overlay {
@@ -38,6 +41,10 @@
 .lockscreen-overlay.is-unlocked {
   opacity: 0;
   filter: blur(2px);
+}
+
+.unlock-spacer {
+  width: 100%;
 }
 
 .lockscreen-inner {
@@ -150,6 +157,7 @@
 
 .section {
   padding: 18px;
+  scroll-snap-align: start;
 }
 
 .card {
