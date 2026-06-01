@@ -1,4 +1,4 @@
-import HeroSection from './sections/HeroSection'
+// import HeroSection from './sections/HeroSection'
 import WordingSection from './sections/WordingSection'
 import CalendarSection from './sections/CalendarSection'
 import GallerySection from './sections/GallerySection'

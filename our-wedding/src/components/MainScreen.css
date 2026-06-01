@@ -17,10 +17,14 @@
 .cover-section {
   height: 100svh;
   scroll-snap-align: start;
+  padding: 18px;
+  box-sizing: border-box;
 }
 
 .cover-section .lockscreen-inner {
   height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .lockscreen-overlay {
@@ -69,6 +73,7 @@
       rgba(0, 0, 0, 0.08) 60%, rgba(0, 0, 0, 0.02)),
     radial-gradient(900px 520px at 50% 0%, rgba(255, 255, 255, 0.16), transparent
         60%);
+  border-radius: inherit;
 }
 
 .lockscreen-date {
