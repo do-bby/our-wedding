@@ -112,7 +112,6 @@
 
 .airdrop-preview {
   height: auto;
-  max-height: min(45vh, 320px);
   background: rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
@@ -120,7 +119,6 @@
 .airdrop-preview-img {
   width: 100%;
   height: auto;
-  max-height: min(45vh, 320px);
   object-fit: contain;
   object-position: center;
   background: transparent;
