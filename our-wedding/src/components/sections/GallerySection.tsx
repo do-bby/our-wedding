@@ -2,10 +2,21 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useMemo, useState } from 'react'
 import './GallerySection.css'
 
-import coverImage from '../../images/cover.png'
-import seohyunImage from '../../images/seohyun.png'
-import yoonsooImage from '../../images/yoonsoo.png'
-import directionsImage from '../../images/directions.jpg'
+import galleryImage1 from '../../images/1.jpg'
+import galleryImage2 from '../../images/2.jpg'
+import galleryImage3 from '../../images/3.jpg'
+import galleryImage4 from '../../images/4.jpg'
+import galleryImage5 from '../../images/5.jpg'
+import galleryImage6 from '../../images/6.jpg'
+import galleryImage7 from '../../images/7.jpg'
+import galleryImage8 from '../../images/8.jpg'
+import galleryImage9 from '../../images/9.jpg'
+import galleryImage10 from '../../images/10.jpg'
+import galleryImage11 from '../../images/11.jpg'
+import galleryImage12 from '../../images/12.jpg'
+import galleryImage13 from '../../images/13.jpg'
+import galleryImage14 from '../../images/14.jpg'
+import galleryImage15 from '../../images/15.jpg'
 
 type GallerySectionProps = {
   id?: string
@@ -28,18 +39,21 @@ export default function GallerySection({
   const galleryImages = useMemo(() => {
     if (images && images.length > 0) return images
     return [
-      seohyunImage,
-      yoonsooImage,
-      coverImage,
-      directionsImage,
-      coverImage,
-      seohyunImage,
-      yoonsooImage,
-      coverImage,
-      directionsImage,
-      coverImage,
-      seohyunImage,
-      yoonsooImage,
+      galleryImage1,
+      galleryImage2,
+      galleryImage3,
+      galleryImage4,
+      galleryImage5,
+      galleryImage6,
+      galleryImage7,
+      galleryImage8,
+      galleryImage9,
+      galleryImage10,
+      galleryImage11,
+      galleryImage12,
+      galleryImage13,
+      galleryImage14,
+      galleryImage15,
     ]
   }, [images])
 
@@ -118,7 +132,9 @@ export default function GallerySection({
               aria-label={`Gallery image ${idx + 1}`}
               onClick={() => openLightbox(idx)}
             >
-              <img className="gallery-img" src={src} alt="" loading="lazy" />
+              <span className="gallery-img-frame" style={{ backgroundImage: `url(${src})` }}>
+                <img className="gallery-img" src={src} alt="" loading="lazy" />
+              </span>
             </button>
           ))}
         </div>
@@ -181,7 +197,10 @@ export default function GallerySection({
                 </svg>
               </button>
 
-              <div className="gallery-lightbox-stage">
+              <div
+                className="gallery-lightbox-stage"
+                style={{ backgroundImage: `url(${galleryImages[activeIndex]})` }}
+              >
                 <img className="gallery-lightbox-img" src={galleryImages[activeIndex]} alt="" draggable={false} />
               </div>
 
