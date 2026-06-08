@@ -31,10 +31,13 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
       >
         <div className="invitation-head">
           <div className="invitation-kicker">INVITATION</div>
-          <div className="invitation-sub">저희, 드디어 결혼합니다.</div>
+          <div className="invitation-sub">초대합니다.</div>
         </div>
 
         <div className="invitation-body">
+          <p>
+            저희, 드디어 결혼합니다.
+          </p>
           <p>
             같은 나이, 같은 계절을 지나며 서로의 가장 좋은 친구가 된 저희가 이제는 평생을 함께할 가족이 되려 합니다.
           </p>
@@ -45,10 +48,10 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
 
         <div className="invitation-family">
           <div className="family-line">
-            박태식 · 성숙진의 아들 <b>박윤수</b>
+            박태식 · 성숙진의 아들 박윤수
           </div>
           <div className="family-line">
-            김대홍 · 김미경의 딸 <b>김서현</b>
+            김대홍 · 김미경의 딸 김서현
           </div>
         </div>
 
