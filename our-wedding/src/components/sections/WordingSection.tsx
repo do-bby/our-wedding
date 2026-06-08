@@ -31,7 +31,7 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
       >
         <div className="invitation-head">
           <div className="invitation-kicker">INVITATION</div>
-          <div className="invitation-sub">초대장</div>
+          <div className="invitation-sub">💌</div>
         </div>
 
         <div className="invitation-body">
