@@ -26,6 +26,10 @@
   object-position: center 20%;
 }
 
+.profile-avatar--groom {
+  object-position: center 20%;
+}
+
 .profile-line {
   display: inline-flex;
   align-items: baseline;

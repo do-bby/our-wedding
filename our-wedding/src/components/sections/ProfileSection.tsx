@@ -33,7 +33,7 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
         <h2 className="section-title">About Us</h2>
         <div className="profiles">
           <div className="profile">
-            <img className="profile-avatar" src={yoonsooImage} alt="신랑 윤수" />
+            <img className="profile-avatar profile-avatar--groom" src={yoonsooImage} alt="신랑 윤수" />
             <div className="profile-line">
               <span className="profile-role">Groom</span>
               <span className="profile-name">윤수</span>
