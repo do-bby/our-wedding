@@ -36,13 +36,16 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
 
         <div className="invitation-body">
           <p>
-            저희, 드디어 결혼합니다.
+            저희, 결혼합니다.
           </p>
           <p>
-            같은 나이, 같은 계절을 지나며 서로의 가장 좋은 친구가 된 저희가 이제는 평생을 함께할 가족이 되려 합니다.
+            같은 나이, 같은 계절을 지나며<br></br>
+            서로의 가장 좋은 친구가 된 저희가 <span className="nowrap">이제는 평생을 함께할 가족이 되려 합니다.</span>
           </p>
           <p>
-            소중한 분들과 기쁜 순간을 나누고 싶습니다. 바쁘신 걸음 잠시 내어 축복해 주신다면 더없이 행복하겠습니다.
+            <span className="nowrap">소중한 분들과 기쁜 순간을 나누고 싶습니다.</span>
+            <br></br>
+            바쁘신 걸음 잠시 내어 축복해 주신다면 더없이 행복하겠습니다.
           </p>          
         </div>
 

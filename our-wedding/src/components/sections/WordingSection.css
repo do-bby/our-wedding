@@ -49,6 +49,10 @@
   line-break: strict;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .invitation-family {
   margin: 26px auto 0;
   max-width: 280px;
