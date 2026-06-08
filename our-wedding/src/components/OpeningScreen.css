@@ -111,19 +111,19 @@
 }
 
 .airdrop-preview {
-  height: 220px;
-  background:
-    radial-gradient(640px 320px at 50% 0%, rgba(0, 0, 0, 0.18), transparent 60%),
-    linear-gradient(135deg, rgba(27, 127, 255, 0.14), rgba(101, 215, 255, 0.14));
+  height: auto;
+  max-height: min(45vh, 320px);
+  background: rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
 
 .airdrop-preview-img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: min(45vh, 320px);
   object-fit: contain;
   object-position: center;
-  background: rgba(0, 0, 0, 0.06);
+  background: transparent;
   display: block;
 }
 

@@ -34,13 +34,19 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
         <div className="profiles">
           <div className="profile">
             <img className="profile-avatar" src={yoonsooImage} alt="신랑 윤수" />
-            <div className="profile-name">Groom</div>
-            <div className="profile-role">윤수</div>
+            <div className="profile-line">
+              <span className="profile-role">Groom</span>
+              <span className="profile-name">윤수</span>
+            </div>
+            <div className="profile-tagline">#신랑 #윤수</div>
           </div>
           <div className="profile">
             <img className="profile-avatar" src={seohyunImage} alt="신부 서현" />
-            <div className="profile-name">Bride</div>
-            <div className="profile-role">서현</div>
+            <div className="profile-line">
+              <span className="profile-role">Bride</span>
+              <span className="profile-name">서현</span>
+            </div>
+            <div className="profile-tagline">#신부 #서현</div>
           </div>
         </div>
       </motion.div>
