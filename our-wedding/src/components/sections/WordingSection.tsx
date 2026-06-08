@@ -31,29 +31,16 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
       >
         <div className="invitation-head">
           <div className="invitation-kicker">INVITATION</div>
-          <div className="invitation-sub">초대합니다</div>
+          <div className="invitation-sub">저희, 드디어 결혼합니다.</div>
         </div>
 
         <div className="invitation-body">
           <p>
-            초록이 짙어가는 여름날,
-            <br />
-            서로의 손을 맞잡고
-            <br />
-            평생을 함께하기로 약속했습니다.
+            같은 나이, 같은 계절을 지나며 서로의 가장 좋은 친구가 된 저희가 이제는 평생을 함께할 가족이 되려 합니다.
           </p>
           <p>
-            서로에게 가장 큰 위로이자
-            <br />
-            기쁨이 되어줄 두 사람이
-            <br />
-            이제 하나의 길을 걸어가려 합니다.
-          </p>
-          <p>
-            소중한 걸음 하시어
-            <br />
-            저희의 시작을 함께 축복해 주세요.
-          </p>
+            소중한 분들과 기쁜 순간을 나누고 싶습니다. 바쁘신 걸음 잠시 내어 축복해 주신다면 더없이 행복하겠습니다.
+          </p>          
         </div>
 
         <div className="invitation-family">

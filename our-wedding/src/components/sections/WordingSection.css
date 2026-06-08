@@ -45,6 +45,8 @@
 
 .invitation-body p {
   margin: 0;
+  word-break: keep-all;
+  line-break: strict;
 }
 
 .invitation-family {

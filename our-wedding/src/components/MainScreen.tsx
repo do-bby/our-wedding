@@ -37,10 +37,10 @@ export default function MainScreen() {
         <WordingSection />
         <CalendarSection />        
         <ProfileSection />
+        <GallerySection />
         <LocationSection />
         <AccountSection />
-        <TimelineSection />
-        <GallerySection />
+        <TimelineSection />        
 
         <footer className="footer">© Our Wedding</footer>
       </div>
