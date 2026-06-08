@@ -31,7 +31,7 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
       >
         <div className="invitation-head">
           <div className="invitation-kicker">INVITATION</div>
-          <div className="invitation-sub">초대합니다.</div>
+          <div className="invitation-sub">초대장</div>
         </div>
 
         <div className="invitation-body">
@@ -45,7 +45,7 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
           <p>
             <span className="nowrap">소중한 분들과 기쁜 순간을 나누고 싶습니다.</span>
             <br></br>
-            바쁘신 걸음 잠시 내어 축복해 주신다면 더없이 행복하겠습니다.
+            바쁘신 걸음 잠시 내어 축복해 주신다면 <span className="nowrap">더없이 행복하겠습니다.</span>
           </p>          
         </div>
 
