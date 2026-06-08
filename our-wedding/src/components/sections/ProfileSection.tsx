@@ -41,7 +41,7 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
             <div className="profile-tagline">#신랑 #윤수</div>
           </div>
           <div className="profile">
-            <img className="profile-avatar" src={seohyunImage} alt="신부 서현" />
+            <img className="profile-avatar profile-avatar--bride" src={seohyunImage} alt="신부 서현" />
             <div className="profile-line">
               <span className="profile-role">Bride</span>
               <span className="profile-name">서현</span>

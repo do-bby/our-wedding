@@ -22,6 +22,10 @@
   background: linear-gradient(135deg, rgba(27, 127, 255, 0.25), rgba(101, 215, 255, 0.25));  
 }
 
+.profile-avatar--bride {
+  object-position: center 20%;
+}
+
 .profile-line {
   display: inline-flex;
   align-items: baseline;
