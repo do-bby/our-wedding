@@ -14,7 +14,6 @@
 
 .card.invitation {
   padding: 34px 22px;
-  padding-top: 42px;
   text-align: center;
   border-radius: 0;
 }
@@ -22,7 +21,6 @@
 .invitation-head {
   display: grid;
   gap: 6px;
-  padding-top: 20px;
   margin-bottom: 6px;
 }
 

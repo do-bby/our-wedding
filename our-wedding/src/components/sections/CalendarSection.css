@@ -40,12 +40,13 @@
 }
 
 .calendar-date {
-  font-size: 13px;
+  font-size: 23px;
   font-weight: 650;
   color: rgba(15, 18, 24, 0.86);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
+  margin-bottom: 10px;
 }
 
 .calendar-venue {

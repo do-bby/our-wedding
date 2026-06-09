@@ -231,8 +231,8 @@
   display: grid;
   place-items: center;
   border-radius: 50% 50% 50% 0;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 10px 22px rgba(15, 18, 24, 0.08);
+  background: var(--tiffany);
+  box-shadow: 0 10px 22px rgba(43, 191, 186, 0.22);
   transform: rotate(-45deg);
 }
 
