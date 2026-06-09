@@ -35,6 +35,7 @@ export default function GallerySection({
   const [activeIndex, setActiveIndex] = useState(0)
   const [touchStartX, setTouchStartX] = useState<number | null>(null)
   const [touchDeltaX, setTouchDeltaX] = useState(0)
+  const [touchStartedOnControl, setTouchStartedOnControl] = useState(false)
 
   const galleryImages = useMemo(() => {
     if (images && images.length > 0) return images
@@ -167,30 +168,58 @@ export default function GallerySection({
             <div
               className="gallery-lightbox-inner"
               onTouchStart={(e) => {
+                const target = e.target as HTMLElement | null
+                const startedOnControl = Boolean(target?.closest('button'))
+                setTouchStartedOnControl(startedOnControl)
+                if (startedOnControl) return
                 setTouchStartX(e.touches[0]?.clientX ?? null)
                 setTouchDeltaX(0)
               }}
               onTouchMove={(e) => {
+                if (touchStartedOnControl) return
                 if (touchStartX == null) return
                 const x = e.touches[0]?.clientX ?? touchStartX
                 setTouchDeltaX(x - touchStartX)
               }}
               onTouchEnd={() => {
+                if (touchStartedOnControl) {
+                  setTouchStartedOnControl(false)
+                  setTouchStartX(null)
+                  setTouchDeltaX(0)
+                  return
+                }
                 const threshold = 60
                 if (touchDeltaX > threshold) goPrev()
                 if (touchDeltaX < -threshold) goNext()
                 setTouchStartX(null)
                 setTouchDeltaX(0)
+                setTouchStartedOnControl(false)
               }}
             >
-              <button type="button" className="gallery-lightbox-close" onClick={closeLightbox} aria-label="Close">
+              <button
+                type="button"
+                className="gallery-lightbox-close"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  closeLightbox()
+                }}
+                aria-label="Close"
+              >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                   <path d="M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </button>
 
-              <button type="button" className="gallery-lightbox-nav is-prev" onClick={goPrev} aria-label="Previous">
+              <button
+                type="button"
+                className="gallery-lightbox-nav is-prev"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  goPrev()
+                }}
+                aria-label="Previous"
+              >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -200,7 +229,15 @@ export default function GallerySection({
                 <img className="gallery-lightbox-img" src={galleryImages[activeIndex]} alt="" draggable={false} />
               </div>
 
-              <button type="button" className="gallery-lightbox-nav is-next" onClick={goNext} aria-label="Next">
+              <button
+                type="button"
+                className="gallery-lightbox-nav is-next"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  goNext()
+                }}
+                aria-label="Next"
+              >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

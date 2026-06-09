@@ -161,11 +161,15 @@
   right: max(10px, env(safe-area-inset-right));
   width: 36px;
   height: 36px;
+  display: grid;
+  place-items: center;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(0, 0, 0, 0.35);
   color: rgba(255, 255, 255, 0.92);
   z-index: 3;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .gallery-lightbox-nav {
@@ -174,11 +178,15 @@
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
+  display: grid;
+  place-items: center;
   border-radius: 999px;
   border: 0;
   background: rgba(0, 0, 0, 0.55);
   color: rgba(255, 255, 255, 0.96);
   z-index: 2;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .gallery-lightbox-nav:active {
