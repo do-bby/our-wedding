@@ -4,6 +4,10 @@
   padding: 6px 0 2px;
 }
 
+.timeline-section-card {
+  padding: 22px 18px;
+}
+
 .timeline-alt::before {
   content: '';
   position: absolute;

@@ -111,7 +111,7 @@ export default function GallerySection({
   return (
     <section className="section" id={id}>
       <motion.div
-        className="card"
+        className="card gallery-card"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
