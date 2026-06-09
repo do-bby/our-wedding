@@ -107,7 +107,7 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
   }, [kakaoMapKey, place.lat, place.lng])
 
   return (
-    <section className="section" id={id}>
+    <section className="section location-section" id={id}>
       <motion.div
         className="location-card"
         variants={sectionVariants}

@@ -1,11 +1,13 @@
 .account-card {
   padding: 34px 22px;
+  padding-top: 42px;
 }
 
 .account-head {
   display: grid;
   gap: 6px;
   text-align: center;
+  padding-top: 8px;
 }
 
 .account-kicker {

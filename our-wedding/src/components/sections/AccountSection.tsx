@@ -85,7 +85,7 @@ export default function AccountSection({ id = 'account' }: AccountSectionProps) 
   } as const
 
   return (
-    <section className="section" id={id}>
+    <section className="section account-section" id={id}>
       <motion.div
         className="card account-card"
         variants={sectionVariants}

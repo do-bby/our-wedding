@@ -109,7 +109,7 @@ export default function GallerySection({
   const canToggle = galleryImages.length > initialVisibleCount
 
   return (
-    <section className="section" id={id}>
+    <section className="section gallery-section" id={id}>
       <motion.div
         className="card gallery-card"
         variants={sectionVariants}
@@ -196,10 +196,7 @@ export default function GallerySection({
                 </svg>
               </button>
 
-              <div
-                className="gallery-lightbox-stage"
-                style={{ backgroundImage: `url(${galleryImages[activeIndex]})` }}
-              >
+              <div className="gallery-lightbox-stage">
                 <img className="gallery-lightbox-img" src={galleryImages[activeIndex]} alt="" draggable={false} />
               </div>
 

@@ -47,7 +47,7 @@ export default function TimelineSection({ id = 'timeline' }: TimelineSectionProp
   ]
 
   return (
-    <section className="section" id={id}>
+    <section className="section timeline-section" id={id}>
       <motion.div
         className="card timeline-section-card"
         variants={sectionVariants}
