@@ -27,6 +27,23 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
     lng: 126.8826913,
   }
 
+  const copyText = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      return
+    } catch {
+      const el = document.createElement('textarea')
+      el.value = text
+      el.setAttribute('readonly', '')
+      el.style.position = 'fixed'
+      el.style.left = '-9999px'
+      document.body.appendChild(el)
+      el.select()
+      document.execCommand('copy')
+      document.body.removeChild(el)
+    }
+  }
+
   const softEase = [0.22, 1, 0.36, 1] as const
   const sectionTransition = prefersReducedMotion
     ? { duration: 0 }
@@ -139,10 +156,19 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
         
 
         <div className="location-info">
-          {/* <div className="location-row">
+          <div className="location-row">
             <div className="location-label">주소</div>
-            <div className="location-text">경기도 광명시 양지로 17 아이벡스 컨벤션</div>
-          </div> */}
+            <div className="location-actions">
+              <div className="location-text">경기도 광명시 양지로 17 광명점 AK플라자 5층</div>
+              <button
+                type="button"
+                className="copy-button"
+                onClick={() => copyText('경기도 광명시 양지로 17 광명점 AK플라자 5층')}
+              >
+                복사
+              </button>
+            </div>
+          </div>
 
           {/* <div className="location-row">
             <div className="location-label">지하철</div>

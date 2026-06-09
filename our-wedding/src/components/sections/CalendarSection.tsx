@@ -62,10 +62,10 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
         <div className="calendar-wrap">
           <div className="calendar-card" role="group" aria-label="Wedding Calendar">
             <div className="calendar-header">
-              <div className="calendar-date">
-                2026년 8월 29일 토요일 오후 1시 40분
-              </div>
               <div className="calendar-venue">광명 아이벡스컨벤션</div>
+              <div className="calendar-date">
+                2026.8.29 토요일 한 시 사십분
+              </div>              
             </div>
 
             <div className="calendar-divider" aria-hidden="true" />
@@ -100,7 +100,9 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
 
             <div className="calendar-note">
               <span className="calendar-note-heart" aria-hidden="true">♥</span>
-              <span>결혼식이 {days}일 남았습니다</span>
+              <span>
+                결혼식이 <span className="calendar-note-days">{days}</span>일 남았습니다
+              </span>
             </div>
           </div>
         </div>

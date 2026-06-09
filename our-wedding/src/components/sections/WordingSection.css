@@ -15,6 +15,7 @@
 .card.invitation {
   padding: 34px 22px;
   text-align: center;
+  border-radius: 0;
 }
 
 .invitation-head {
@@ -34,7 +35,7 @@
 }
 
 .invitation-body {
-  margin: 26px auto 0;
+  margin: 5px auto 0;
   max-width: 260px;
   display: grid;
   gap: 18px;

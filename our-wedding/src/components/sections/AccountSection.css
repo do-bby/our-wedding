@@ -72,6 +72,28 @@
   gap: 12px;
 }
 
+.account-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.copy-button {
+  flex: 0 0 auto;
+  border: 1px solid rgba(15, 18, 24, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  color: rgba(15, 18, 24, 0.72);
+  font-size: 12px;
+  font-weight: 650;
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+.copy-button:active {
+  transform: translateY(1px);
+}
+
 .account-label {
   flex: 0 0 auto;
   font-weight: 650;
@@ -79,6 +101,6 @@
 }
 
 .account-phone {
-  color: rgba(61, 134, 208, 0.95);
+  color: var(--tiffany-strong);
   text-decoration: none;
 }

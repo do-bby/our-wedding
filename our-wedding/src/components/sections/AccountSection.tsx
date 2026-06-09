@@ -15,7 +15,13 @@ const accounts = [
   },
   {
     label: '신랑 부모님 마음 전하실 곳',
-    name: '신랑 부모님',
+    name: '신랑 어머님',
+    phone: '',
+    account: '계좌번호를 입력해주세요',
+  },
+  {
+    label: '신랑 부모님 마음 전하실 곳',
+    name: '신랑 어머님',
     phone: '',
     account: '계좌번호를 입력해주세요',
   },
@@ -26,16 +32,39 @@ const accounts = [
     account: '국민 592202-01-653258',
   },
   {
-    label: '신부 부모님 마음 전하실 곳',
-    name: '신부 부모님',
+    label: '신부 아버님 마음 전하실 곳',
+    name: '신부 아버님',
     phone: '',
     account: '국민 496502-91-106264',
+  },
+  {
+    label: '신부 어머님 마음 전하실 곳',
+    name: '신부 어머님',
+    phone: '',
+    account: '농협 211001-56-023806',
   },
 ]
 
 export default function AccountSection({ id = 'account' }: AccountSectionProps) {
   const prefersReducedMotion = useReducedMotion()
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  const copyText = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      return
+    } catch {
+      const el = document.createElement('textarea')
+      el.value = text
+      el.setAttribute('readonly', '')
+      el.style.position = 'fixed'
+      el.style.left = '-9999px'
+      document.body.appendChild(el)
+      el.select()
+      document.execCommand('copy')
+      document.body.removeChild(el)
+    }
+  }
 
   const softEase = [0.22, 1, 0.36, 1] as const
   const sectionTransition = prefersReducedMotion
@@ -85,7 +114,16 @@ export default function AccountSection({ id = 'account' }: AccountSectionProps) 
                     </div>
                     <div className="account-line">
                       <span className="account-label">계좌</span>
-                      <span>{item.account}</span>
+                      <span className="account-actions">
+                        <span>{item.account}</span>
+                        <button
+                          type="button"
+                          className="copy-button"
+                          onClick={() => copyText(item.account)}
+                        >
+                          복사
+                        </button>
+                      </span>
                     </div>
                     {item.phone ? (
                       <div className="account-line">

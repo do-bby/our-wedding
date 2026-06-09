@@ -118,9 +118,8 @@ export default function GallerySection({
         viewport={{ once: true, amount: 0.35 }}
         transition={sectionTransition}
       >
-        <div className="gallery-header">
-          <div className="gallery-title">📸</div>
-          <div className="gallery-subtitle">갤러리</div>
+        <div className="gallery-header">          
+          <div className="gallery-subtitle">📸 갤러리</div>
         </div>
 
         <div className="gallery-grid" role="list" aria-label="Gallery">

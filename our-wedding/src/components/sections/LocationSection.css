@@ -12,7 +12,7 @@
 .location-pin-badge {
   display: grid;
   place-items: center;
-  color: rgba(61, 134, 208, 0.95);
+  color: var(--tiffany-strong);
   font-size: 18px;
   font-weight: 700;
 }
@@ -66,8 +66,8 @@
   display: grid;
   place-items: center;
   border-radius: 999px;
-  background: rgba(255, 92, 139, 0.96);
-  box-shadow: 0 12px 24px rgba(255, 92, 139, 0.28);
+  background: var(--tiffany-strong);
+  box-shadow: 0 12px 24px rgba(43, 191, 186, 0.26);
 }
 
 .kakao-place-heart {
@@ -167,8 +167,8 @@
   width: 30px;
   height: 30px;
   border-radius: 999px;
-  background: rgba(255, 92, 139, 0.96);
-  box-shadow: 0 12px 24px rgba(255, 92, 139, 0.28);
+  background: var(--tiffany-strong);
+  box-shadow: 0 12px 24px rgba(43, 191, 186, 0.26);
   transform: translate(-50%, -50%);
   display: grid;
   place-items: center;
@@ -207,7 +207,7 @@
   height: 6px;
   border-radius: 999px;
   background: rgba(61, 169, 226, 0.92);
-  box-shadow: 0 0 0 5px rgba(61, 169, 226, 0.12);
+  box-shadow: 0 0 0 5px rgba(61, 169, 226, 0.16);
 }
 
 .map-link-list {
@@ -255,6 +255,28 @@
   gap: 9px;
 }
 
+.location-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.copy-button {
+  flex: 0 0 auto;
+  border: 1px solid rgba(15, 18, 24, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  color: rgba(15, 18, 24, 0.72);
+  font-size: 12px;
+  font-weight: 650;
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+.copy-button:active {
+  transform: translateY(1px);
+}
+
 .location-label {
   display: flex;
   align-items: center;
@@ -271,7 +293,7 @@
   height: 6px;
   border-radius: 999px;
   background: rgba(61, 169, 226, 0.92);
-  box-shadow: 0 0 0 5px rgba(61, 169, 226, 0.12);
+  box-shadow: 0 0 0 5px rgba(61, 169, 226, 0.16);
 }
 
 .location-text {
