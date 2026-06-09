@@ -22,6 +22,7 @@
 .invitation-head {
   display: grid;
   gap: 6px;
+  padding-top: 20px;
   margin-bottom: 6px;
 }
 

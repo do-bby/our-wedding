@@ -56,7 +56,7 @@ export default function TimelineSection({ id = 'timeline' }: TimelineSectionProp
         viewport={{ once: true, amount: 0.35 }}
         transition={sectionTransition}
       >
-        <h2 className="section-title">TIME LINE</h2>
+        <h2 className="section-title">🗓️</h2>
         <div className="timeline-alt" role="list">
           {items.map((it, idx) => (
             <div
