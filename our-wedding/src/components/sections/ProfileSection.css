@@ -8,10 +8,21 @@
   text-align: center;
 }
 
+.profile-section {
+  background: var(--tiffany);
+}
+
+.profile-section-card {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
 .profile {
-  border: 1px solid var(--border);
-  background: rgba(129, 216, 208, 0.18);
-  border-radius: 16px;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
   padding: 16px 14px;
   text-align: center;
 }

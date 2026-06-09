@@ -49,9 +49,9 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
   } as const
 
   return (
-    <section className="section" id={id}>
+    <section className="section calendar-section" id={id}>
       <motion.div
-        className="card"
+        className="card calendar-section-card"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -64,7 +64,7 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
             <div className="calendar-header">
               <div className="calendar-venue">광명 아이벡스컨벤션</div>
               <div className="calendar-date">
-                2026.8.29 토요일 한 시 사십분
+                2026.8.29 토요일<br></br>한 시 사십분
               </div>              
             </div>
 

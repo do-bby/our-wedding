@@ -23,7 +23,7 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
   return (
     <section className="section profile-section" id={id}>
       <motion.div
-        className="card"
+        className="card profile-section-card"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"

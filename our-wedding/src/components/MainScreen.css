@@ -58,7 +58,7 @@
   align-content: start;
   gap: 10px;
   color: rgba(255, 255, 255, 0.92);
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-color: rgba(15, 18, 24, 0.96);
@@ -162,7 +162,8 @@
 }
 
 .section {
-  padding: 18px;
+  padding: 0;
+  margin: 0;
   scroll-snap-align: start;
 }
 
@@ -172,6 +173,7 @@
   box-shadow: var(--shadow);
   border-radius: 0;
   padding: 22px 18px;
+  margin: 0;
 }
 
 .footer {
