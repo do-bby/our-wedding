@@ -58,9 +58,10 @@
   align-content: start;
   gap: 10px;
   color: rgba(255, 255, 255, 0.92);
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center bottom;
   background-repeat: no-repeat;
+  background-color: rgba(15, 18, 24, 0.96);
   position: relative;
 }
 
