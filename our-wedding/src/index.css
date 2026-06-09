@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
 
 :root {
   --bg: #fbfbfc;
@@ -13,7 +13,7 @@
   --tiffany: #81d8d0;
   --tiffany-strong: #2bbfba;
 
-  --sans: 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+  --sans: 'Gaegu', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
     'Noto Sans KR', sans-serif;
   --serif: ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino, serif;
 
