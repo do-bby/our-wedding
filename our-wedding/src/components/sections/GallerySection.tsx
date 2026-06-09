@@ -119,7 +119,7 @@ export default function GallerySection({
         transition={sectionTransition}
       >
         <div className="gallery-header">
-          <div className="gallery-title">GALLERY</div>
+          <div className="gallery-title">📸</div>
           <div className="gallery-subtitle">갤러리</div>
         </div>
 

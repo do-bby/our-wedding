@@ -11,7 +11,7 @@ const accounts = [
     label: '신랑측 마음 전하실 곳',
     name: '박윤수',
     phone: '010-2217-9743',
-    account: '계좌번호를 입력해주세요',
+    account: '카카오뱅크 3333-12-6777544',
   },
   {
     label: '신랑 부모님 마음 전하실 곳',
@@ -23,13 +23,13 @@ const accounts = [
     label: '신부측 마음 전하실 곳',
     name: '김서현',
     phone: '010-2743-0705',
-    account: '계좌번호를 입력해주세요',
+    account: '국민 592202-01-653258',
   },
   {
     label: '신부 부모님 마음 전하실 곳',
     name: '신부 부모님',
     phone: '',
-    account: '계좌번호를 입력해주세요',
+    account: '국민 496502-91-106264',
   },
 ]
 
@@ -58,7 +58,7 @@ export default function AccountSection({ id = 'account' }: AccountSectionProps) 
         transition={sectionTransition}
       >
         <div className="account-head">
-          <div className="account-kicker">ACCOUNT</div>
+          <div className="account-kicker">🖤</div>
           <div className="account-sub">마음 전하실 곳</div>
         </div>
 

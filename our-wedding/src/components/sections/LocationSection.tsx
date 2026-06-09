@@ -66,17 +66,12 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
         center,
         level: 3,
       })
-      const marker = new window.kakao.maps.Marker({
-        position: center,
-      })
-      marker.setMap(map)
 
       const overlay = new window.kakao.maps.CustomOverlay({
         position: center,
         content: `
           <div class="kakao-place-overlay">
-            <span class="kakao-place-dot" aria-hidden="true"></span>
-            <span class="kakao-place-text">${place.name}</span>
+            <span class="kakao-place-heart" aria-hidden="true">♥</span>
           </div>
         `,
         yAnchor: 1.6,
@@ -136,7 +131,6 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
           <div className="map-road vertical left" />
           <div className="map-road vertical center" />
           <div className="map-road vertical right" />
-          <div className="map-place main">아이벡스<br />컨벤션</div>
           <div className="map-place station">광명역</div>
           <div className="map-pin" aria-hidden="true" />
         </div>
@@ -160,7 +154,7 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
           </div>
         </div>
 
-        <div className="map-link-title">앱 바로연결</div>
+        <div className="map-link-title">앱 바로 연결</div>
 
         <div className="map-link-list" aria-label="지도 앱 바로가기">
           {mapLinks.map(item => (

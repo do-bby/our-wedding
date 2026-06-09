@@ -61,32 +61,20 @@
 }
 
 .kakao-place-overlay {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 12px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: -0.1px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 92, 139, 0.96);
+  box-shadow: 0 12px 24px rgba(255, 92, 139, 0.28);
+}
+
+.kakao-place-heart {
+  font-size: 16px;
   line-height: 1;
-  white-space: nowrap;
-  color: rgba(15, 18, 24, 0.82);
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(15, 18, 24, 0.1);
-  border-radius: 999px;
-  box-shadow: 0 8px 18px rgba(15, 18, 24, 0.12);
-  backdrop-filter: blur(6px);
-}
-
-.kakao-place-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: rgba(61, 169, 226, 0.92);
-}
-
-.kakao-place-text {
-  display: inline-block;
+  color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
 }
 
 .location-map.has-kakao-map .kakao-map-view {
@@ -176,20 +164,22 @@
   position: absolute;
   left: 50%;
   top: 94px;
-  width: 28px;
-  height: 28px;
-  border-radius: 50% 50% 50% 0;
-  background: rgba(61, 134, 208, 0.96);
-  box-shadow: 0 12px 24px rgba(61, 134, 208, 0.34);
-  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: rgba(255, 92, 139, 0.96);
+  box-shadow: 0 12px 24px rgba(255, 92, 139, 0.28);
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
 }
 
 .map-pin::after {
-  content: '';
-  position: absolute;
-  inset: 8px;
-  border-radius: 999px;
-  background: #fff;
+  content: '♥';
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
 }
 
 .location-directions {

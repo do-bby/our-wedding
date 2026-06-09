@@ -19,36 +19,35 @@
   padding: 16px 16px 18px;
 }
 
-.calendar-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgba(15, 18, 24, 0.45);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-}
-
-.calendar-top-left {
-  justify-self: start;
-}
-
-.calendar-top-center {
-  justify-self: center;
-}
-
-.calendar-top-right {
-  justify-self: end;
-}
-
-.calendar-month {
-  margin-top: 10px;
-  margin-bottom: 22px;
-  font-size: 34px;
-  font-weight: 650;
-  color: rgba(15, 18, 24, 0.9);
-  letter-spacing: -0.8px;
+.calendar-header {
   text-align: center;
+  padding-top: 2px;
 }
+
+.calendar-date {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(15, 18, 24, 0.88);
+  letter-spacing: -0.2px;
+}
+
+.calendar-venue {
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(15, 18, 24, 0.45);
+}
+
+.calendar-divider {
+  margin: 18px 0;
+  height: 1px;
+  background: rgba(15, 18, 24, 0.08);
+}
+
+.calendar-divider.is-bottom {
+  margin: 16px 0 12px;
+}
+
+
 
 .calendar-weekdays {
   margin-top: 0;
@@ -94,7 +93,7 @@
 }
 
 .calendar-day.is-target {
-  color: rgba(15, 18, 24, 0.82);
+  color: rgba(255, 255, 255, 0.96);
   z-index: 1;  
 }
 
@@ -104,47 +103,22 @@
   left: 50%;
   top: 50%;
   z-index: -1;
-  color: rgba(61, 169, 226, 0.92);
-  font-size: 30px;
+  color: rgba(15, 18, 24, 0.92);
+  font-size: 32px;
   transform: translate(-50%, -50%);
 }
 
-.calendar-day-time {
-  position: absolute;
-  left: 50%;
-  bottom: -2px;
-  transform: translateX(-50%);
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1;
-  color: rgba(61, 134, 208, 0.95);
-}
-
-.dday-text {
+.calendar-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   font-size: 13px;
-  color: rgba(15, 18, 24, 0.6);
+  color: rgba(15, 18, 24, 0.62);
 }
 
-.dday {
-  width: 100%;
-  max-width: 320px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  text-align: center;
-}
-
-.dday-label {
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: rgba(15, 18, 24, 0.42);
-}
-
-.dday-value {
-  margin-top: 6px;
-  font-size: 18px;
-  font-weight: 650;
-  color: rgba(15, 18, 24, 0.88);
+.calendar-note-heart {
+  color: rgba(15, 18, 24, 0.92);
 }
 
 .calendar-row {

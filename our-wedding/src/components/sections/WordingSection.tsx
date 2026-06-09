@@ -30,7 +30,7 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
         transition={sectionTransition}
       >
         <div className="invitation-head">
-          <div className="invitation-kicker">INVITATION</div>
+          {/* <div className="invitation-kicker">INVITATION</div> */}
           <div className="invitation-sub">💌</div>
         </div>
 
