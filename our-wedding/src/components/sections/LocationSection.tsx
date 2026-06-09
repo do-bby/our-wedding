@@ -27,22 +27,7 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
     lng: 126.8826913,
   }
 
-  const copyText = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text)
-      return
-    } catch {
-      const el = document.createElement('textarea')
-      el.value = text
-      el.setAttribute('readonly', '')
-      el.style.position = 'fixed'
-      el.style.left = '-9999px'
-      document.body.appendChild(el)
-      el.select()
-      document.execCommand('copy')
-      document.body.removeChild(el)
-    }
-  }
+  
 
   const softEase = [0.22, 1, 0.36, 1] as const
   const sectionTransition = prefersReducedMotion
