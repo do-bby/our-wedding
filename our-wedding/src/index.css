@@ -1,4 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'AppFont';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/gaegu/v23/TuGSUVB6Up9NU57nifw7.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/gaegu/v23/TuGfUVB6Up9NU6ZL.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/gaegu/v23/TuGSUVB6Up9NU573jvw7.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserifkr/v31/3JnoSDn90Gmq2mr3blnHaTZXbOtLJDvui3JOnci4eM52.ttf)
+    format('truetype');
+  unicode-range: U+1100-11FF, U+3130-318F, U+AC00-D7AF;
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserifkr/v31/3JnoSDn90Gmq2mr3blnHaTZXbOtLJDvui3JOncjmeM52.ttf)
+    format('truetype');
+  unicode-range: U+1100-11FF, U+3130-318F, U+AC00-D7AF;
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserifkr/v31/3JnoSDn90Gmq2mr3blnHaTZXbOtLJDvui3JOncjUeM52.ttf)
+    format('truetype');
+  unicode-range: U+1100-11FF, U+3130-318F, U+AC00-D7AF;
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserifkr/v31/3JnoSDn90Gmq2mr3blnHaTZXbOtLJDvui3JOncg4f852.ttf)
+    format('truetype');
+  unicode-range: U+1100-11FF, U+3130-318F, U+AC00-D7AF;
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserifkr/v31/3JnoSDn90Gmq2mr3blnHaTZXbOtLJDvui3JOncgBf852.ttf)
+    format('truetype');
+  unicode-range: U+1100-11FF, U+3130-318F, U+AC00-D7AF;
+}
 
 :root {
   --bg: #fbfbfc;
@@ -13,10 +91,8 @@
   --tiffany: #81d8d0;
   --tiffany-strong: #2bbfba;
 
-  --sans: 'Noto Serif KR', ui-serif, 'Noto Sans KR', system-ui, -apple-system, 'Segoe UI', Roboto,
-    serif;
-  --serif: 'Noto Serif KR', ui-serif, 'Noto Sans KR', system-ui, -apple-system, 'Segoe UI', Roboto,
-    serif;
+  --sans: 'AppFont', ui-serif, 'Noto Sans KR', system-ui, -apple-system, 'Segoe UI', Roboto, serif;
+  --serif: 'AppFont', ui-serif, 'Noto Sans KR', system-ui, -apple-system, 'Segoe UI', Roboto, serif;
 
   font: 16px/165% var(--sans);
   letter-spacing: 0.02em;

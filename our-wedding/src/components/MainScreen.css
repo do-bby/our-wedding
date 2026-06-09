@@ -81,6 +81,7 @@
 .lockscreen-date {
   position: relative;
   z-index: 1;
+  font-family: 'Noto Serif KR', ui-serif, 'Noto Sans KR', system-ui, -apple-system, 'Segoe UI', Roboto, serif;
   font-size: 22px;
   letter-spacing: -0.2px;
   opacity: 0.92;
