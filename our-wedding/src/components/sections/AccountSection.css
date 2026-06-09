@@ -11,7 +11,7 @@
 }
 
 .account-kicker {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.16em;
@@ -31,6 +31,7 @@
 
 .account-item {
   overflow: hidden;
+  font-size: 13px;
   border-radius: 13px;
   background: rgba(15, 18, 24, 0.035);
 }
@@ -50,7 +51,7 @@
   padding: 0 16px;
   background: var(--tiffany);
   font: inherit;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 650;
   color: rgba(255, 255, 255, 0.92);
 }

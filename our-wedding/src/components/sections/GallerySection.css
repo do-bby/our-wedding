@@ -34,14 +34,14 @@
   margin-top: 6px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 0;
 }
 
 .gallery-item {
   padding: 0;
   border: none;
   background: transparent;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   aspect-ratio: 1 / 1;
   box-shadow: 0 6px 14px rgba(15, 18, 24, 0.08);
@@ -147,11 +147,11 @@
 .gallery-lightbox-img {
   position: relative;
   z-index: 1;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   background: transparent;
   user-select: none;
