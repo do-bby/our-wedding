@@ -54,6 +54,7 @@
 .lockscreen-inner {
   height: 100%;
   padding: 64px 18px 22px;
+  box-sizing: border-box;
   display: grid;
   align-content: start;
   gap: 10px;

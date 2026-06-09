@@ -12,7 +12,7 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.16em;
-  color: rgba(15, 18, 24, 0.82);
+  color: var(--tiffany-strong);
 }
 
 .account-sub {
@@ -32,6 +32,10 @@
   background: rgba(15, 18, 24, 0.035);
 }
 
+.account-item.is-open {
+  background: rgba(129, 216, 208, 0.18);
+}
+
 .account-toggle {
   width: 100%;
   min-height: 45px;
@@ -41,15 +45,16 @@
   gap: 6px;
   border: 0;
   padding: 0 16px;
-  background: transparent;
+  background: var(--tiffany);
   font: inherit;
   font-size: 13px;
-  color: rgba(15, 18, 24, 0.58);
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .account-chevron {
   display: inline-block;
-  color: rgba(15, 18, 24, 0.45);
+  color: rgba(255, 255, 255, 0.88);
   transform: translateY(-1px);
 }
 
@@ -63,6 +68,17 @@
   padding: 4px 18px 18px;
   font-size: 13px;
   color: rgba(15, 18, 24, 0.68);
+}
+
+.account-person {
+  display: grid;
+  gap: 10px;
+}
+
+.account-person + .account-person {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(15, 18, 24, 0.08);
 }
 
 .account-line {
@@ -86,8 +102,8 @@
   color: rgba(15, 18, 24, 0.72);
   font-size: 12px;
   font-weight: 650;
-  padding: 8px 10px;
-  border-radius: 999px;
+  padding: 6px 8px;
+  border-radius: 8px;
 }
 
 .copy-button:active {

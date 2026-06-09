@@ -156,19 +156,7 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
         
 
         <div className="location-info">
-          <div className="location-row">
-            <div className="location-label">주소</div>
-            <div className="location-actions">
-              <div className="location-text">경기도 광명시 양지로 17 광명점 AK플라자 5층</div>
-              <button
-                type="button"
-                className="copy-button"
-                onClick={() => copyText('경기도 광명시 양지로 17 광명점 AK플라자 5층')}
-              >
-                복사
-              </button>
-            </div>
-          </div>
+          
 
           {/* <div className="location-row">
             <div className="location-label">지하철</div>

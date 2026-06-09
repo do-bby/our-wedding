@@ -29,8 +29,7 @@ export default function WordingSection({ id = 'wording' }: WordingSectionProps) 
         viewport={{ once: true, amount: 0.05 }}
         transition={sectionTransition}
       >
-        <div className="invitation-head">
-          {/* <div className="invitation-kicker">INVITATION</div> */}
+        <div className="invitation-head">          
           <div className="invitation-sub">💌</div>
         </div>
 
