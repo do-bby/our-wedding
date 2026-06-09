@@ -21,6 +21,7 @@
 .invitation-head {
   display: grid;
   gap: 6px;
+  margin-bottom: 6px;
 }
 
 .invitation-kicker {
@@ -35,7 +36,7 @@
 }
 
 .invitation-body {
-  margin: 5px auto 0;
+  margin: 0 auto 0;
   max-width: 260px;
   display: grid;
   gap: 18px;

@@ -96,8 +96,6 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
               })}
             </div>
 
-            <div className="calendar-divider is-bottom" aria-hidden="true" />
-
             <div className="calendar-note">
               <span className="calendar-note-heart" aria-hidden="true">♥</span>
               <span>

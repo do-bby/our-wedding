@@ -9,8 +9,9 @@
 }
 
 .account-kicker {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
+  line-height: 1;
   letter-spacing: 0.16em;
   color: var(--tiffany-strong);
 }
@@ -78,7 +79,7 @@
 .account-person + .account-person {
   margin-top: 12px;
   padding-top: 12px;
-  border-top: 1px solid rgba(15, 18, 24, 0.08);
+  border-top: 0;
 }
 
 .account-line {

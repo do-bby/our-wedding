@@ -8,7 +8,6 @@ type AccountSectionProps = {
 
 type AccountItem = {
   name: string
-  phone: string
   account: string
 }
 
@@ -22,20 +21,17 @@ const accountGroups: AccountGroup[] = [
     label: '신랑측 마음 전하실 곳',
     items: [
       {
+        name: '박윤수',
+        account: '카카오뱅크 3333-12-6777544',
+      },
+      {
         name: '신랑 아버님',
-        phone: '',
         account: '계좌번호를 입력해주세요',
       },
       {
         name: '신랑 어머님',
-        phone: '',
         account: '계좌번호를 입력해주세요',
-      },
-      {
-        name: '박윤수',
-        phone: '010-2217-9743',
-        account: '카카오뱅크 3333-12-6777544',
-      },
+      },      
     ],
   },
   {
@@ -43,17 +39,14 @@ const accountGroups: AccountGroup[] = [
     items: [
       {
         name: '김서현',
-        phone: '010-2743-0705',
         account: '국민 592202-01-653258',
       },
       {
         name: '신부 아버님',
-        phone: '',
         account: '국민 496502-91-106264',
       },
       {
         name: '신부 어머님',
-        phone: '',
         account: '농협 211001-56-023806',
       },
     ],
@@ -141,15 +134,7 @@ export default function AccountSection({ id = 'account' }: AccountSectionProps) 
                               복사
                             </button>
                           </span>
-                        </div>
-                        {item.phone ? (
-                          <div className="account-line">
-                            <span className="account-label">연락처</span>
-                            <a className="account-phone" href={`tel:${item.phone}`}>
-                              {item.phone}
-                            </a>
-                          </div>
-                        ) : null}
+                        </div>                        
                       </div>
                     ))}
                   </div>
