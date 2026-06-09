@@ -64,7 +64,8 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
             <div className="calendar-header">
               {/* <div className="calendar-venue">광명 아이벡스컨벤션</div> */}
               <div className="calendar-date">
-                2026.8.29.SAT<br></br>1:40 PM
+                <span className="calendar-date-line">2026.8.29.SAT</span>
+                <span className="calendar-date-time">1:40 PM</span>
               </div>              
             </div>
 

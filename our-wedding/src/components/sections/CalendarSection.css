@@ -53,6 +53,15 @@
   margin-bottom: 6px;
 }
 
+.calendar-date-line {
+  display: block;
+}
+
+.calendar-date-time {
+  display: block;
+  margin-top: 8px;
+}
+
 .calendar-venue {
   margin-top: 8px;
   font-size: 12px;
