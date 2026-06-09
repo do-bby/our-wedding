@@ -35,10 +35,10 @@ export default function MainScreen() {
 
         {/* <HeroSection /> */}
         <WordingSection />
-        <CalendarSection />        
-        <ProfileSection />
-        <GallerySection />
+        <CalendarSection />
         <LocationSection />
+        <ProfileSection />
+        <GallerySection />        
         <AccountSection />
         <TimelineSection />        
 

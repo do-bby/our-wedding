@@ -21,7 +21,7 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
   } as const
 
   return (
-    <section className="section" id={id}>
+    <section className="section profile-section" id={id}>
       <motion.div
         className="card"
         variants={sectionVariants}
