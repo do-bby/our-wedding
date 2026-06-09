@@ -27,7 +27,7 @@
   width: 100%;
   max-width: none;
   border-radius: 0;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(129, 216, 208, 0.65);
   border: 0;
   box-shadow: none;
   padding: 30px 30px 30px;
@@ -143,13 +143,14 @@
 }
 
 .calendar-day.is-target::before {
-  content: '♥';
+  content: '';
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: -1;
-  color: var(--tiffany-strong);
-  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 20.5s-7-4.6-9.3-9.1C0.8 7.6 3 4.8 6 4.8c1.7 0 3.2.9 4 2.1c.8-1.2 2.3-2.1 4-2.1c3 0 5.2 2.8 3.3 6.6C19 15.9 12 20.5 12 20.5Z' stroke='%23ffffff' stroke-width='1.9' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
   transform: translate(-50%, -50%);
 }
 
