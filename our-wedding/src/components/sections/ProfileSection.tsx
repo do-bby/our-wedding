@@ -30,7 +30,6 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
         viewport={{ once: true, amount: 0.35 }}
         transition={sectionTransition}
       >
-        <h2 className="section-title">🤵‍♂️💍👰‍♀️</h2>
         <div className="profiles">
           <div className="profile">
             <img className="profile-avatar profile-avatar--groom" src={yoonsooImage} alt="신랑 윤수" />
@@ -40,6 +39,9 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
             </div>
             <div className="profile-tagline">#공감왕 #집돌이<br></br>#흘러가는대로살자</div>
           </div>
+
+          <div className="profiles-emoji" aria-hidden="true">🤵‍♂️💍👰‍♀️</div>
+
           <div className="profile">
             <img className="profile-avatar profile-avatar--bride" src={seohyunImage} alt="신부 서현" />
             <div className="profile-line">

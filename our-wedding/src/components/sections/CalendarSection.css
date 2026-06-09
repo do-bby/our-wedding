@@ -30,17 +30,19 @@
   background: rgba(129, 216, 208, 0.55);
   border: 0;
   box-shadow: none;
-  padding: 22px 22px 20px;
+  padding: 30px 30px 30px;
   margin: 0;
 }
 
 .calendar-header {
   text-align: center;
-  padding-top: 2px;
+  padding-top: 0;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .calendar-date {
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 650;
   color: rgba(15, 18, 24, 0.86);
   letter-spacing: 0.14em;
@@ -57,7 +59,7 @@
 }
 
 .calendar-divider {
-  margin: 0;
+  margin: 14px 0 0;
   height: 1px;
   background: transparent;
 }
@@ -69,11 +71,15 @@
 
 
 .calendar-weekdays {
-  margin-top: 0;
+  margin-top: 12px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 8px;
   text-align: center;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .calendar-weekday {
@@ -89,10 +95,14 @@
 
 .calendar-grid {
   margin-top: 10px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 12px 8px;
   text-align: center;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .calendar-day {
@@ -133,12 +143,16 @@
 }
 
 .calendar-note {
+  margin-top: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   font-size: 13px;
   color: rgba(15, 18, 24, 0.62);
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .calendar-note-heart {
