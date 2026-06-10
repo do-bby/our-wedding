@@ -20,16 +20,17 @@
 
 .location-kicker {
   font-size: 18px;
-  font-weight: 750;
+  font-weight: 600;
   letter-spacing: -0.3px;
-  color: rgba(15, 18, 24, 0.86);
+  color: rgba(15, 18, 24, 0.72);
 }
 
 .location-sub {
   margin-top: 4px;
   font-size: 14px;
   line-height: 165%;
-  color: rgba(15, 18, 24, 0.56);
+  font-weight: 600;
+  color: rgba(15, 18, 24, 0.72);
 }
 
 .location-place {
@@ -62,20 +63,35 @@
 }
 
 .kakao-place-overlay {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
   border-radius: 999px;
-  background: var(--tiffany-strong);
-  box-shadow: 0 12px 24px rgba(43, 191, 186, 0.26);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 24px rgba(43, 191, 186, 0.28);
 }
 
-.kakao-place-heart {
-  font-size: 16px;
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.95);
-  transform: translateY(-1px);
+.kakao-place-ring {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--tiffany-strong);
+  border-radius: 999px;
+  transform: translateY(3px);
+}
+
+.kakao-place-ring::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -9px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--tiffany-strong);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.96);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .location-map.has-kakao-map .kakao-map-view {
@@ -165,22 +181,36 @@
   position: absolute;
   left: 50%;
   top: 94px;
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   border-radius: 999px;
-  background: var(--tiffany-strong);
-  box-shadow: 0 12px 24px rgba(43, 191, 186, 0.26);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 24px rgba(43, 191, 186, 0.28);
   transform: translate(-50%, -50%);
   display: grid;
   place-items: center;
 }
 
 .map-pin::after {
-  content: '♥';
-  font-size: 16px;
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.95);
-  transform: translateY(-1px);
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--tiffany-strong);
+  border-radius: 999px;
+  transform: translateY(3px);
+}
+
+.map-pin::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--tiffany-strong);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.96);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .location-directions {
@@ -199,16 +229,16 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
-  color: rgba(15, 18, 24, 0.86);
+  color: rgba(15, 18, 24, 0.46);
 }
 
 .map-link-title::before {
   content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: rgba(61, 169, 226, 0.92);
-  box-shadow: 0 0 0 5px rgba(61, 169, 226, 0.16);
+  width: 8px;
+  height: 14px;
+  border-right: 2px solid var(--tiffany-strong);
+  border-bottom: 2px solid var(--tiffany-strong);
+  transform: rotate(45deg);
 }
 
 .map-link-list {
@@ -285,20 +315,20 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
-  color: rgba(15, 18, 24, 0.86);
+  color: rgba(15, 18, 24, 0.46);
 }
 
 .location-label::before {
   content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: rgba(61, 169, 226, 0.92);
-  box-shadow: 0 0 0 5px rgba(61, 169, 226, 0.16);
+  width: 8px;
+  height: 14px;
+  border-right: 2px solid var(--tiffany-strong);
+  border-bottom: 2px solid var(--tiffany-strong);
+  transform: rotate(45deg);
 }
 
 .location-text {
   font-size: 14px;
   line-height: 170%;
-  color: rgba(15, 18, 24, 0.56);
+  color: rgba(15, 18, 24, 0.72);
 }

@@ -73,7 +73,7 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
         position: center,
         content: `
           <div class="kakao-place-overlay">
-            <span class="kakao-place-heart" aria-hidden="true">♥</span>
+            <span class="kakao-place-ring" aria-hidden="true"></span>
           </div>
         `,
         yAnchor: 1.6,
@@ -117,7 +117,7 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
         transition={sectionTransition}
       >
         <div className="location-head">
-          <div className="location-pin-badge" aria-hidden="true">⌖</div>
+          <div className="location-pin-badge" aria-hidden="true">🚗</div>
           <div className="location-kicker">아이벡스 오시는 길</div>
           <div className="location-sub">경기도 광명시 양지로 17<br></br>광명점 AK플라자 5층</div>
         </div>

@@ -11,7 +11,7 @@
 }
 
 .account-kicker {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.16em;
@@ -97,6 +97,10 @@
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
+}
+
+.account-number {
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
 }
 
 .copy-button {

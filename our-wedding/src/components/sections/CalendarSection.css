@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/webfontworld/naver/NanumBarunGothic.css');
+
 .calendar {
   display: grid;
   gap: 10px;
@@ -26,6 +29,7 @@
 .calendar-card {
   width: 100%;
   max-width: none;
+  min-height: 460px;
   border-radius: 0;
   background: rgba(129, 216, 208, 0.65);
   border: 0;
@@ -43,23 +47,57 @@
 }
 
 .calendar-date {
+  width: calc(100% - 26px);
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Cormorant Garamond', var(--serif);
   font-size: 18px;
   font-weight: 650;
-  color: rgba(15, 18, 24, 0.86);
-  letter-spacing: 0.14em;
+  color: rgba(15, 18, 24, 0.86);  
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
   line-height: 1.15;
   margin-bottom: 6px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .calendar-date-line {
-  display: block;
+  display: inline-flex;
+  align-items: baseline;
+  text-align: left;
+  min-width: 0;
+  letter-spacing: 0.08em;
 }
 
 .calendar-date-time {
-  display: block;
-  margin-top: 8px;
+  display: inline-flex;
+  align-items: baseline;
+  text-align: right;
+  min-width: 0;
+  letter-spacing: 0.1em;
+  margin-top: 0;
+}
+
+.calendar-date-line .calendar-date-number {
+  font-size: 24px;
+}
+
+.calendar-date-time .calendar-date-number {  
+  font-size: 22px;
+}
+
+.calendar-date-line .calendar-date-letter {
+  font-size: 15px;
+  margin-left: 2px;
+}
+
+.calendar-date-time .calendar-date-letter {
+  font-size: 14px;
+  margin-left: 2px;
 }
 
 .calendar-venue {
@@ -70,7 +108,7 @@
 }
 
 .calendar-divider {
-  margin: 14px 0 0;
+  margin: 20px 0 0;
   height: 1px;
   background: transparent;
 }
@@ -82,11 +120,11 @@
 
 
 .calendar-weekdays {
-  margin-top: 12px;
+  margin-top: 30px;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
+  gap: 4px;
   text-align: center;
   max-width: 320px;
   margin-left: auto;
@@ -105,11 +143,11 @@
 }
 
 .calendar-grid {
-  margin-top: 10px;
+  margin-top: 8px;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 4px 4px;
+  gap: 4px 6px;
   text-align: center;
   max-width: 320px;
   margin-left: auto;
@@ -117,7 +155,7 @@
 }
 
 .calendar-day {
-  height: 36px;
+  height: 32px;
   display: grid;
   place-items: center;
   font-size: 13px;
@@ -126,10 +164,10 @@
   color: rgba(15, 18, 24, 0.82);
   border-radius: 999px;
   position: relative;
-  font-variant-numeric: tabular-nums;
 }
 
 .calendar-day-number {
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -138,8 +176,12 @@
 }
 
 .calendar-day.is-target {
-  color: rgba(255, 255, 255, 0.96);
+  color: var(--tiffany-strong);
   z-index: 1;  
+}
+
+.calendar-day.is-target .calendar-day-number {
+  color: var(--tiffany-strong);
 }
 
 .calendar-day.is-target::before {
@@ -150,13 +192,13 @@
   z-index: -1;
   width: 40px;
   height: 40px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 20.5s-7-4.6-9.3-9.1C0.8 7.6 3 4.8 6 4.8c1.7 0 3.2.9 4 2.1c.8-1.2 2.3-2.1 4-2.1c3 0 5.2 2.8 3.3 6.6C19 15.9 12 20.5 12 20.5Z' stroke='%23ffffff' stroke-width='1.9' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 20.6C7.1 16.4 3 12.8 3 8.8C3 6.3 4.8 4.5 7.2 4.5C9.1 4.5 10.7 5.7 12 7.4C13.3 5.7 14.9 4.5 16.8 4.5C19.2 4.5 21 6.3 21 8.8C21 12.8 16.9 16.4 12 20.6Z' fill='%23ffffff'/%3E%3C/svg%3E") center center / contain no-repeat;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
   transform: translate(-50%, -50%);
 }
 
 .calendar-note {
-  margin-top: 18px;
-  margin-bottom: 10px;
+  margin-top: 25px;  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,6 +215,7 @@
 }
 
 .calendar-note-days {
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
   color: var(--tiffany-strong);
   font-weight: 750;
 }

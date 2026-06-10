@@ -35,7 +35,7 @@ export default function OpeningScreen({ accepted, onAccept }: OpeningScreenProps
         aria-label="AirDrop"
       >
         <div className="airdrop-header">AirDrop</div>
-        <div className="airdrop-message">🌻 윤수 그리고 서현의 결혼식에 초대합니다. 🌻</div>
+        <div className="airdrop-message">🌻윤수 그리고 서현의 결혼식에 초대합니다.🌻</div>
         <div className="airdrop-preview" aria-hidden="true">
           <img className="airdrop-preview-img" src={airDropImage} alt="" />
         </div>

@@ -53,6 +53,17 @@ const accountGroups: AccountGroup[] = [
   },
 ]
 
+const renderAccountText = (text: string) =>
+  text.split(/(\d+)/g).map((part, index) =>
+    /^\d+$/.test(part) ? (
+      <span className="account-number" key={`${part}-${index}`}>
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  )
+
 export default function AccountSection({ id = 'account' }: AccountSectionProps) {
   const prefersReducedMotion = useReducedMotion()
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -96,7 +107,7 @@ export default function AccountSection({ id = 'account' }: AccountSectionProps) 
       >
         <div className="account-head">
           <div className="account-kicker">♥</div>
-          <div className="account-sub">마음 전하실 곳</div>
+          {/* <div className="account-sub">마음 전하실 곳</div> */}
         </div>
 
         <div className="account-list">
@@ -125,7 +136,7 @@ export default function AccountSection({ id = 'account' }: AccountSectionProps) 
                         <div className="account-line">
                           <span className="account-label">계좌</span>
                           <span className="account-actions">
-                            <span>{item.account}</span>
+                            <span>{renderAccountText(item.account)}</span>
                             <button
                               type="button"
                               className="copy-button"

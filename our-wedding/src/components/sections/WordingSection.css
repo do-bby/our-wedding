@@ -22,8 +22,8 @@
 
 .invitation-head {
   display: grid;
-  gap: 6px;
-  margin-bottom: 6px;
+  gap: 4px;
+  margin-bottom: 2px;
 }
 
 .invitation-kicker {
@@ -41,7 +41,7 @@
   margin: 0 auto 0;
   max-width: 260px;
   display: grid;
-  gap: 18px;
+  gap: 25px;
   text-align: center;
   color: rgba(15, 18, 24, 0.72);
   font-size: 14px;
@@ -60,12 +60,12 @@
 }
 
 .invitation-family {
-  margin: 26px auto 0;
+  margin: 16px auto 0;
   max-width: 280px;
   display: grid;
-  gap: 10px;
+  gap: 3px;
   text-align: center;
-  color: rgba(15, 18, 24, 0.64);
+  color: rgba(15, 18, 24, 0.46);
   font-size: 13px;
   font-weight: 520;
   font-weight: 650;
