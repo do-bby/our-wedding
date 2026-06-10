@@ -284,6 +284,7 @@
 .location-row {
   display: grid;
   gap: 9px;
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
 }
 
 .location-actions {
