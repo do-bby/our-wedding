@@ -1,7 +1,7 @@
 .profiles {
   display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: center;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  width: 100%;
   gap: 8px;
   align-items: center;
 }
@@ -30,6 +30,7 @@
   background: transparent;
   border-radius: 0;
   padding: 16px 10px;
+  min-width: 0;
   text-align: center;
 }
 
