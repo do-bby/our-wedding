@@ -14,7 +14,7 @@
   display: grid;
   place-items: center;
   color: var(--tiffany-strong);
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -230,6 +230,7 @@
   font-weight: 700;
   line-height: 1.2;
   color: rgba(15, 18, 24, 0.46);
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
 }
 
 .map-link-title::before {
@@ -254,6 +255,10 @@
   gap: 7px;
   padding: 8px 6px 10px;
   text-decoration: none;
+}
+
+.map-link .location-text {
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
 }
 
 .map-link-heart {
@@ -284,6 +289,17 @@
 .location-row {
   display: grid;
   gap: 9px;
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
+}
+
+.location-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(15, 18, 24, 0.46);
   font-family: 'NanumBarunGothic', system-ui, sans-serif;
 }
 

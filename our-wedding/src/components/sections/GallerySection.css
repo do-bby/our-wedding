@@ -124,7 +124,7 @@
 
 .gallery-lightbox-inner {
   position: relative;
-  width: min(520px, 100%);
+  width: min(90vw, 600px);
   border-radius: 14px;
   background: rgba(10, 10, 12, 0.2);
 }
@@ -132,16 +132,17 @@
 .gallery-lightbox-stage {
   position: relative;
   width: 100%;
-  height: min(74vh, 560px);
+  height: min(80vh, 600px);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 14px;
   overflow: hidden;
   clip-path: inset(0 round 14px);
-  padding: 12px;
+  padding: 0;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.28);
+  touch-action: none;
 }
 
 .gallery-lightbox-img {
@@ -155,6 +156,8 @@
   display: block;
   background: transparent;
   user-select: none;
+  touch-action: none;
+  -webkit-user-drag: none;
 }
 
 .gallery-lightbox-close {

@@ -4,6 +4,10 @@
   padding: 6px 0 2px;
 }
 
+.timeline-section {
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
+}
+
 .timeline-section .section-title {
   text-align: center;
   font-size: 13px;
