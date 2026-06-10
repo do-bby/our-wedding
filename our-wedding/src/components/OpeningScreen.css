@@ -6,6 +6,7 @@
   place-items: center;
   padding: 22px;
   pointer-events: auto;
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
 }
 
 .opening-bg {

@@ -1,8 +1,8 @@
 .location-card {
   padding: 34px 22px;
   background: rgba(255, 255, 255, 1);
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
 }
-
 .location-head {
   display: grid;
   justify-items: center;

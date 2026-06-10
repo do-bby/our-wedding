@@ -15,6 +15,7 @@
 
 .profile-section {
   background: var(--tiffany);
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
 }
 
 .profile-section-card {
@@ -69,7 +70,7 @@
   font-family: inherit;
   font-size: 18px;
   font-weight: 650;
-  color: var(--text-strong);
+  color: #747e93f2;
 }
 
 .profile-tagline {
