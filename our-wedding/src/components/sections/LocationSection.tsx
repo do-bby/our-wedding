@@ -19,6 +19,7 @@ declare global {
 export default function LocationSection({ id = 'location' }: LocationSectionProps) {
   const prefersReducedMotion = useReducedMotion()
   const mapRef = useRef<HTMLDivElement | null>(null)
+  const kakaoMapRef = useRef<any>(null)
   const [isKakaoMapReady, setIsKakaoMapReady] = useState(false)
   const kakaoMapKey = import.meta.env.VITE_KAKAO_MAP_APP_KEY
   const place = {
@@ -57,6 +58,14 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
     },
   ]
 
+  const handleResetMapPosition = () => {
+    if (!window.kakao?.maps || !kakaoMapRef.current) return
+
+    const center = new window.kakao.maps.LatLng(place.lat, place.lng)
+    kakaoMapRef.current.setLevel(3)
+    kakaoMapRef.current.panTo(center)
+  }
+
   useEffect(() => {
     if (!kakaoMapKey || !mapRef.current) return
 
@@ -68,13 +77,16 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
         center,
         level: 3,
       })
+      kakaoMapRef.current = map
 
       const overlay = new window.kakao.maps.CustomOverlay({
         position: center,
         content: `
-          <div class="kakao-place-overlay">
-            <span class="kakao-place-ring" aria-hidden="true"></span>
-          </div>
+          <svg class="kakao-place-marker" viewBox="0 0 36 48" aria-hidden="true">
+            <path class="kakao-place-marker-shadow" d="M18 46c7.2 0 13-1.5 13-3.4s-5.8-3.4-13-3.4-13 1.5-13 3.4S10.8 46 18 46Z" />
+            <path class="kakao-place-marker-pin" d="M18 2C9.7 2 3 8.7 3 17c0 11.3 15 27 15 27s15-15.7 15-27C33 8.7 26.3 2 18 2Z" />
+            <circle class="kakao-place-marker-hole" cx="18" cy="17" r="6" />
+          </svg>
         `,
         yAnchor: 1.6,
       })
@@ -127,6 +139,16 @@ export default function LocationSection({ id = 'location' }: LocationSectionProp
           aria-label="아이벡스 컨벤션 위치 지도"
         >
           <div ref={mapRef} className="kakao-map-view" aria-hidden={!isKakaoMapReady} />
+          {isKakaoMapReady && (
+            <button
+              className="map-reset-button"
+              type="button"
+              onClick={handleResetMapPosition}
+              aria-label="아이벡스 컨벤션 위치로 지도 되돌리기"
+            >
+              위치로 돌아가기
+            </button>
+          )}
           <div className="map-road horizontal top" />
           <div className="map-road horizontal middle" />
           <div className="map-road horizontal bottom" />
