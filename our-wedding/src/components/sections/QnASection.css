@@ -3,13 +3,13 @@
 }
 
 .qna .qna-section {
-  background: transparent;
+  background: #ffffff;
 }
 
 .qna .invitation {
   padding: 30px 30px 30px;
   border-radius: 0;
-  background: rgba(129, 216, 208, 0.65);
+  background: #ffffff;
   border: 0;
   box-shadow: none;
 }
@@ -42,28 +42,38 @@
 }
 
 .qna .qna-answer {
-  font-size: 13px;
-  color: #333;
-  line-height: 1.4;
+  display: grid;
+  gap: 10px;
 }
 
-.qna .qna-person {
+.qna .qna-bubble {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 14px 16px;
+  background: rgba(129, 216, 208, 0.25);
+  border-radius: 20px;
+  border: 1px solid rgba(129, 216, 208, 0.55);
+}
+
+.qna .qna-bubble--joint {
+  grid-template-columns: auto auto 1fr;
+}
+
+.qna .qna-bubble-head {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 0;
-}
-
-.qna .qna-person--joint {
   gap: 8px;
 }
 
 .qna .qna-avatar {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  background: rgba(0,0,0,0.04);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .qna .qna-text {

@@ -17,12 +17,12 @@ type QnAItem = {
 const QUESTIONS: QnAItem[] = [
   {
     q: '서로의 첫인상은?',
-    seohyun: '서현: ',
-    yoonsoo: '윤수: '
+    seohyun: '서현: 처음 봤을 때는 잘생긴 친구가 있네? 정도였는데, 대화를 해보니 정말 재미있고 배려심이 깊은 친구라는 걸 알게 됐어요.',
+    yoonsoo: '윤수: 예쁘고 밝은 친구라는 첫인상이었어요. 대화를 해보니 다정한 친구라는 걸 알게 되었어요.'
   },
   {
     q: '데이트 할 때 메뉴를 더 못 고르는 사람은?',
-    seohyun: '서현: ',
+    seohyun: '서현: 윤수를 배려하는거에요 ...ㅠㅠ',
     yoonsoo: '윤수: 서현이가 항상 더 못 고르는 편이었어요. 메뉴판을 보면 한참을 보다가 결국엔 제가 고르게 되더라고요.'
   },
   {
@@ -31,7 +31,7 @@ const QUESTIONS: QnAItem[] = [
   },
   {
     q: '결혼 후 가장 기대되는 것은?',
-    seohyun: '서현: ',
+    seohyun: '서현: 퇴근 후 집에서 윤수와의 시간',
     yoonsoo: '윤수: 퇴근 후 집에서 서현이와의 시간'
   }
 ]
@@ -70,20 +70,26 @@ export default function QnASection({ id = 'qna' }: QnASectionProps) {
               <div className="qna-question">Q. {item.q}</div>
               <div className="qna-answer">
                 {item.joint ? (
-                  <div className="qna-person qna-person--joint">
-                    <img className="qna-avatar" src={youngSeohyun} alt="서현" />
-                    <img className="qna-avatar" src={youngYoonsoo} alt="윤수" />
+                  <div className="qna-bubble qna-bubble--joint">
+                    <div className="qna-bubble-head">
+                      <img className="qna-avatar" src={youngSeohyun} alt="서현" />
+                      <img className="qna-avatar" src={youngYoonsoo} alt="윤수" />
+                    </div>
                     <div className="qna-text">{item.joint}</div>
                   </div>
                 ) : (
                   <>
-                    <div className="qna-person">
-                      <img className="qna-avatar" src={youngSeohyun} alt="서현" />
+                    <div className="qna-bubble">
+                      <div className="qna-bubble-head">
+                        <img className="qna-avatar" src={youngSeohyun} alt="서현" />
+                      </div>
                       <div className="qna-text">{item.seohyun?.replace(/^서현:\s*/, '')}</div>
                     </div>
 
-                    <div className="qna-person">
-                      <img className="qna-avatar" src={youngYoonsoo} alt="윤수" />
+                    <div className="qna-bubble">
+                      <div className="qna-bubble-head">
+                        <img className="qna-avatar" src={youngYoonsoo} alt="윤수" />
+                      </div>
                       <div className="qna-text">{item.yoonsoo?.replace(/^윤수:\s*/, '')}</div>
                     </div>
                   </>

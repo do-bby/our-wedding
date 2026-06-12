@@ -37,7 +37,11 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
               <span className="profile-role">신랑</span>
               <span className="profile-name">윤수</span>
             </div>
-            <div className="profile-tagline">#공감왕 #집돌이<br></br>#계획대론못살아</div>
+            <div className="profile-tagline">
+              <span className="nowrap">#공감왕 #집돌이</span>
+              <br />
+              <span>#계획대론못살아</span>
+            </div>
           </div>
 
           <div className="profiles-emoji" aria-hidden="true">🤵‍♂️💍👰‍♀️</div>
@@ -48,7 +52,11 @@ export default function ProfileSection({ id = 'profile' }: ProfileSectionProps) 
               <span className="profile-role">신부</span>
               <span className="profile-name">서현</span>
             </div>
-            <div className="profile-tagline">#윤수한정T #콩순언니<br></br>#계획없이못살아</div>
+            <div className="profile-tagline">
+              <span className="nowrap">#윤수한정T #콩순언니</span>
+              <br />
+              <span>#계획없이못살아</span>
+            </div>
           </div>
         </div>
       </motion.div>
