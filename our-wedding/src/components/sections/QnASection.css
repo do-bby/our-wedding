@@ -1,0 +1,73 @@
+.qna {
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
+}
+
+.qna .qna-section {
+  background: transparent;
+}
+
+.qna .invitation {
+  padding: 30px 30px 30px;
+  border-radius: 0;
+  background: rgba(129, 216, 208, 0.65);
+  border: 0;
+  box-shadow: none;
+}
+
+.qna .section-title {
+  text-align: center;
+  font-size: 13px;
+  margin: 6px 0 10px;
+  color: #0f1218b8;
+}
+
+.qna .qna-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.qna .qna-item {
+  padding: 8px 6px;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.qna .qna-question {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0f1218;
+  margin-bottom: 6px;
+  font-family: inherit;
+}
+
+.qna .qna-answer {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.qna .qna-person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.qna .qna-person--joint {
+  gap: 8px;
+}
+
+.qna .qna-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: rgba(0,0,0,0.04);
+}
+
+.qna .qna-text {
+  font-size: 13px;
+  color: #333;
+  font-family: inherit;
+}

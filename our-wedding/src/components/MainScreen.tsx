@@ -3,6 +3,7 @@ import WordingSection from './sections/WordingSection'
 import CalendarSection from './sections/CalendarSection'
 import GallerySection from './sections/GallerySection'
 import ProfileSection from './sections/ProfileSection'
+import QnASection from './sections/QnASection'
 import LocationSection from './sections/LocationSection'
 import AccountSection from './sections/AccountSection'
 import TimelineSection from './sections/TimelineSection'
@@ -38,6 +39,7 @@ export default function MainScreen() {
         <CalendarSection />
         <LocationSection />
         <ProfileSection />
+        <QnASection />
         <GallerySection />                
         <TimelineSection />       
         <AccountSection /> 
