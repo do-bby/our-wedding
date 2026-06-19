@@ -6,7 +6,7 @@ import ProfileSection from './sections/ProfileSection'
 import QnASection from './sections/QnASection'
 import LocationSection from './sections/LocationSection'
 import AccountSection from './sections/AccountSection'
-import TimelineSection from './sections/TimelineSection'
+// import TimelineSection from './sections/TimelineSection'
 import coverImage from '../images/cover.png'
 import './MainScreen.css'
 
@@ -41,7 +41,7 @@ export default function MainScreen() {
         <ProfileSection />
         <QnASection />
         <GallerySection />                
-        <TimelineSection />       
+        {/* <TimelineSection />        */}
         <AccountSection /> 
 
         <footer className="footer">© Our Wedding</footer>
