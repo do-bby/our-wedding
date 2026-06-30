@@ -10,6 +10,8 @@ import galleryImage5 from '../../images/5.jpg'
 import galleryImage6 from '../../images/6.jpg'
 import galleryImage7 from '../../images/7.jpg'
 import galleryImage8 from '../../images/8.jpg'
+import galleryImage9_1 from '../../images/youngseohyun.png'
+import galleryImage9_2 from '../../images/youngyoonsoo.png'
 import galleryImage9 from '../../images/9.jpg'
 import galleryImage10 from '../../images/10.jpg'
 import galleryImage11 from '../../images/11.jpg'
@@ -20,6 +22,7 @@ import galleryImage15 from '../../images/15.png'
 import galleryImage16 from '../../images/16.png'
 import galleryImage17 from '../../images/17.png'
 import galleryImage18 from '../../images/18.png'
+import galleryImage19 from '../../images/airDrop.png'
 
 type GallerySectionProps = {
   id?: string
@@ -51,6 +54,8 @@ export default function GallerySection({
       galleryImage6,
       galleryImage7,
       galleryImage8,
+      galleryImage9_1,
+      galleryImage9_2,
       galleryImage9,
       galleryImage10,
       galleryImage11,
@@ -61,6 +66,7 @@ export default function GallerySection({
       galleryImage16,
       galleryImage17,
       galleryImage18,
+      galleryImage19,
     ]
   }, [images])
 
