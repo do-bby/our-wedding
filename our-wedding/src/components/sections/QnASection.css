@@ -148,15 +148,8 @@
   color: #2e2e2e;
   font-family: inherit;
   line-height: 1.65;
+  white-space: pre-line;
   word-break: keep-all;
   overflow-wrap: anywhere;
   text-wrap: pretty;
-}
-
-.qna .qna-text span {
-  display: inline;
-}
-
-.qna .qna-text span:not(:last-child)::after {
-  content: ' ';
 }

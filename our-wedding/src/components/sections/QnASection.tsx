@@ -16,29 +16,31 @@ type QnAItem = {
   profileImage?: string
 }
 
-const splitSentences = (text?: string) =>
+const formatAnswerText = (text?: string) =>
   text
     ? text
-        .split(/(?<=[.!])\s*/)
-        .map(sentence => sentence.trim())
-        .filter(Boolean)
-    : []
+        .replace(/\\n/g, '\n')
+        .split('\n')
+        .map(line => line.trim())
+        .join('\n')
+        .trim()
+    : ''
 
 const QUESTIONS: QnAItem[] = [
   {
     q: '서로의 첫인상은?',
-    seohyun: '서현: 순둥한 감자상에 웃는 모습이 참 보기 좋았어요. 그런데 노트북 앞에서는 꽤 멋있더라고요.🤭💻',
+    seohyun: '서현: 순둥한 감자상에 웃는 모습이 참 보기 좋았어요. \n 그런데 노트북 앞에서는 꽤 멋있더라고요.🤭💻',
     yoonsoo: '윤수: 예쁘고 밝은 모습이 기억에 남아요. 대화를 해보니 생각이 깊고, 배려심이 많아서 좋았어요.🙂'
   },
   {
     q: '데이트 때 메뉴를 못 고르는 사람은?',
-    seohyun: '서현: 윤수는 분명 저라고 할 거예요. 하지만 저는 못 고르는 게 아니라… 상대가 먹고 싶은 걸 먼저 생각하는 편입니다.😉',
+    seohyun: '서현: 윤수는 분명 저라고 할 거예요. 저는 못 고르는 게 아니라… \n 상대가 먹고 싶은 걸 먼저 생각하는 편입니다.😉',
     yoonsoo: '윤수: 서현이가 항상 더 못 고르는 편이었어요. 메뉴판을 보면 한참을 보다가 결국엔 제가 고르게 되더라고요.😅'
   },
   {
     q: '신혼 여행지는 어디인가요?',
     profileImage: honeymoonProfile,
-    joint: '가을 스페인을 꿈꿨지만, 예상보다 오른 유류할증료에 잠시 보류!🥹 대신 겨울쯤 따뜻한 휴양지로 떠날 예정이에요. 결혼식이 끝난 후, 여유롭게 정해보려고 합니다.'
+    joint: '가을 스페인을 꿈꿨지만, 유류할증료때문에 보류!🥹\n  대신 겨울쯤 따뜻한 휴양지로 떠날 예정이에요. \n 결혼식 끝난 후, 여유롭게 정해보려고 합니다.'
   },
   {
     q: '결혼 후 가장 기대되는 것은?',
@@ -92,9 +94,7 @@ export default function QnASection({ id = 'qna' }: QnASectionProps) {
                     )}
                     <div className="qna-bubble qna-bubble--joint">
                       <div className="qna-text">
-                        {splitSentences(item.joint).map((sentence, index) => (
-                          <span key={index}>{sentence}</span>
-                        ))}
+                        {formatAnswerText(item.joint)}
                       </div>
                     </div>
                   </div>
@@ -104,9 +104,7 @@ export default function QnASection({ id = 'qna' }: QnASectionProps) {
                       <img className="qna-avatar" src={youngSeohyun} alt="서현" />
                       <div className="qna-bubble qna-bubble--seohyun">
                         <div className="qna-text">
-                          {splitSentences(item.seohyun?.replace(/^서현:\s*/, '')).map((sentence, index) => (
-                            <span key={index}>{sentence}</span>
-                          ))}
+                          {formatAnswerText(item.seohyun?.replace(/^서현:\s*/, ''))}
                         </div>
                       </div>
                     </div>
@@ -115,9 +113,7 @@ export default function QnASection({ id = 'qna' }: QnASectionProps) {
                       <img className="qna-avatar" src={youngYoonsoo} alt="윤수" />
                       <div className="qna-bubble qna-bubble--yoonsoo">
                         <div className="qna-text">
-                          {splitSentences(item.yoonsoo?.replace(/^윤수:\s*/, '')).map((sentence, index) => (
-                            <span key={index}>{sentence}</span>
-                          ))}
+                          {formatAnswerText(item.yoonsoo?.replace(/^윤수:\s*/, ''))}
                         </div>
                       </div>
                     </div>
