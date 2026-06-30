@@ -15,8 +15,11 @@ import galleryImage10 from '../../images/10.jpg'
 import galleryImage11 from '../../images/11.jpg'
 import galleryImage12 from '../../images/12.jpg'
 import galleryImage13 from '../../images/13.jpg'
-import galleryImage14 from '../../images/14.jpg'
-import galleryImage15 from '../../images/15.jpg'
+import galleryImage14 from '../../images/14.png'
+import galleryImage15 from '../../images/15.png'
+import galleryImage16 from '../../images/16.png'
+import galleryImage17 from '../../images/17.png'
+import galleryImage18 from '../../images/18.png'
 
 type GallerySectionProps = {
   id?: string
@@ -55,6 +58,9 @@ export default function GallerySection({
       galleryImage13,
       galleryImage14,
       galleryImage15,
+      galleryImage16,
+      galleryImage17,
+      galleryImage18,
     ]
   }, [images])
 

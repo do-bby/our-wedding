@@ -130,7 +130,7 @@
 }
 
 .qna .qna-message--joint::before {
-  content: '💕';
+  
   display: inline-flex;
   align-items: center;
   justify-content: center;
