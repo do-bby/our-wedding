@@ -33,6 +33,7 @@ export default function MainScreen() {
           >
             <div className="lockscreen-date">8월 29일 (토)</div>
             <div className="lockscreen-time">13:40</div>
+            <div className="lockscreen-married">We are getting married</div>
           </div>
         </section>
 
