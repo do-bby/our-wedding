@@ -11,6 +11,8 @@ import coverImage from '../images/cover.png'
 import './MainScreen.css'
 
 export default function MainScreen() {
+  const pageTitle = document.title || 'Our Wedding'
+
   return (
     <main className="shell">
       <div className="main-content">
@@ -44,7 +46,7 @@ export default function MainScreen() {
         {/* <TimelineSection />        */}
         <AccountSection /> 
 
-        <footer className="footer">© Our Wedding</footer>
+        <footer className="footer">© {pageTitle}</footer>
       </div>
     </main>
   )
