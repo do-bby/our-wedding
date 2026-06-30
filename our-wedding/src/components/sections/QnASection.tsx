@@ -1,5 +1,6 @@
-import { motion, useReducedMotion } from 'framer-motion'
+﻿import { motion, useReducedMotion } from 'framer-motion'
 import './QnASection.css'
+import honeymoonProfile from '../../images/9.jpg'
 import youngSeohyun from '../../images/youngseohyun.png'
 import youngYoonsoo from '../../images/youngyoonsoo.png'
 
@@ -12,12 +13,13 @@ type QnAItem = {
   seohyun?: string
   yoonsoo?: string
   joint?: string
+  profileImage?: string
 }
 
 const splitSentences = (text?: string) =>
   text
     ? text
-        .split(/(?<=[.?!])\s+/)
+        .split(/(?<=[.!])\s*/)
         .map(sentence => sentence.trim())
         .filter(Boolean)
     : []
@@ -29,17 +31,18 @@ const QUESTIONS: QnAItem[] = [
     yoonsoo: '윤수: 예쁘고 밝은 친구라는 첫인상이었어요. 대화를 해보니 다정한 친구라는 걸 알게 되었어요.'
   },
   {
-    q: '데이트 할 때 메뉴를 더 못 고르는 사람은?',
+    q: '데이트 때 메뉴를 못 고르는 사람은?',
     seohyun: '서현: 윤수는 분명 저라고 할 거예요. 하지만 저는 못 고르는 게 아니라… 상대가 먹고 싶은 걸 먼저 생각하는 편입니다.😉',
     yoonsoo: '윤수: 서현이가 항상 더 못 고르는 편이었어요. 메뉴판을 보면 한참을 보다가 결국엔 제가 고르게 되더라고요.'
   },
   {
     q: '신혼 여행지는 어디인가요?',
-    joint: '서현·윤수: 가을 스페인을 꿈꿨지만, 예상보다 오른 유류할증료에 잠시 보류!🥹 대신 겨울쯤 따뜻한 휴양지로 떠날 예정이에요. 결혼식이 끝난 후, 여유롭게 정해보려고 합니다.'
+    profileImage: honeymoonProfile,
+    joint: '가을 스페인을 꿈꿨지만, 예상보다 오른 유류할증료에 잠시 보류!🥹 대신 겨울쯤 따뜻한 휴양지로 떠날 예정이에요. 결혼식이 끝난 후, 여유롭게 정해보려고 합니다.'
   },
   {
     q: '결혼 후 가장 기대되는 것은?',
-    seohyun: '서현: 윤수가 차려주는 따뜻한 밥상...? 🤭🍚',
+    seohyun: '서현: 윤수가 차려주는 따뜻한 밥상? 🤭🍚',
     yoonsoo: '윤수: 퇴근 후 집에서 서현과의 시간'
   }
 ]
@@ -79,10 +82,14 @@ export default function QnASection({ id = 'qna' }: QnASectionProps) {
               <div className="qna-answer">
                 {item.joint ? (
                   <div className="qna-message qna-message--joint">
-                    <div className="qna-avatar-group">
-                      <img className="qna-avatar" src={youngSeohyun} alt="서현" />
-                      <img className="qna-avatar" src={youngYoonsoo} alt="윤수" />
-                    </div>
+                    {item.profileImage ? (
+                      <img className="qna-avatar" src={item.profileImage} alt="" />
+                    ) : (
+                      <div className="qna-avatar-group">
+                        <img className="qna-avatar" src={youngSeohyun} alt="서현" />
+                        <img className="qna-avatar" src={youngYoonsoo} alt="윤수" />
+                      </div>
+                    )}
                     <div className="qna-bubble qna-bubble--joint">
                       <div className="qna-text">
                         {splitSentences(item.joint).map((sentence, index) => (
