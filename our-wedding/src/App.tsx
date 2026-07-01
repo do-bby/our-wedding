@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import MainScreen from './components/MainScreen'
 import OpeningScreen from './components/OpeningScreen'
 import './App.css'
 
 import airDropImage from './images/airDrop.png'
+import bgm from './bgm/SummerBGM.mp3'
 import coverImage from './images/cover.png'
 import seohyunImage from './images/seohyun.png'
 import yoonsooImage from './images/yoonsoo.png'
@@ -11,6 +12,42 @@ import yoonsooImage from './images/yoonsoo.png'
 function App() {
   const [accepted, setAccepted] = useState(false)
   const [assetsReady, setAssetsReady] = useState(false)
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+
+  const getAudio = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio(bgm)
+      audioRef.current.loop = true
+      audioRef.current.volume = 0.45
+    }
+
+    return audioRef.current
+  }
+
+  const playMusic = () => {
+    getAudio()
+      .play()
+      .then(() => setIsMusicPlaying(true))
+      .catch(() => setIsMusicPlaying(false))
+  }
+
+  const toggleMusic = () => {
+    const audio = getAudio()
+
+    if (audio.paused) {
+      playMusic()
+      return
+    }
+
+    audio.pause()
+    setIsMusicPlaying(false)
+  }
+
+  const acceptInvitation = () => {
+    setAccepted(true)
+    playMusic()
+  }
 
   useEffect(() => {
     const html = document.documentElement
@@ -76,10 +113,10 @@ function App() {
         </div>
       )}
 
-      <MainScreen />
+      <MainScreen isMusicPlaying={isMusicPlaying} onToggleMusic={toggleMusic} />
 
       {!accepted && (
-        <OpeningScreen accepted={accepted} onAccept={() => setAccepted(true)} />
+        <OpeningScreen accepted={accepted} onAccept={acceptInvitation} />
       )}
     </>
   )

@@ -10,12 +10,26 @@ import AccountSection from './sections/AccountSection'
 import coverImage from '../images/cover.png'
 import './MainScreen.css'
 
-export default function MainScreen() {
+type MainScreenProps = {
+  isMusicPlaying: boolean
+  onToggleMusic: () => void
+}
+
+export default function MainScreen({ isMusicPlaying, onToggleMusic }: MainScreenProps) {
   const pageTitle = document.title || 'Our Wedding'
 
   return (
     <main className="shell">
       <div className="main-content">
+        <button
+          type="button"
+          className="music-toggle"
+          onClick={onToggleMusic}
+          aria-label={isMusicPlaying ? '음악 중지' : '음악 재생'}
+        >
+          {isMusicPlaying ? 'Ⅱ' : '▶'}
+        </button>
+
         {/* <header className="topbar">
           <div className="topbar-title">Our Wedding</div>
           <nav className="topbar-nav">
@@ -33,7 +47,11 @@ export default function MainScreen() {
           >
             <div className="lockscreen-date">8월 29일 (토)</div>
             <div className="lockscreen-time">13:40</div>
-            <div className="lockscreen-married">We are getting married</div>
+            <div className="lockscreen-married">
+              We are getting
+              <br />
+              married
+            </div>
           </div>
         </section>
 

@@ -17,9 +17,9 @@ export default function CalendarSection({ id = 'calendar' }: CalendarSectionProp
   }, [])
 
   const { days } = useMemo(() => {
-    const diff = Math.max(0, target.getTime() - now.getTime())
-    const totalSeconds = Math.floor(diff / 1000)
-    const d = Math.floor(totalSeconds / 86400)
+    const targetDate = Date.UTC(target.getFullYear(), target.getMonth(), target.getDate())
+    const todayDate = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
+    const d = Math.max(0, Math.round((targetDate - todayDate) / 86400000))
     return { days: d }
   }, [now, target])
 
