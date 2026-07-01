@@ -31,6 +31,40 @@
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
 }
 
+.kakao-share {
+  position: fixed;
+  top: calc(max(14px, env(safe-area-inset-top)) + 50px);
+  right: 14px;
+  z-index: 20;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(45, 33, 0, 0.1);
+  border-radius: 999px;
+  background: rgba(254, 229, 0, 0.92);
+  display: grid;
+  place-items: center;
+  color: rgba(24, 20, 0, 0.9);
+  font-family: 'NanumBarunGothic', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+}
+
+.kakao-share-label {
+  grid-area: 1 / 1;
+}
+
+.kakao-share-icon {
+  grid-area: 1 / 1;
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
 .cover-section {
   height: 100svh;
   scroll-snap-align: start;
@@ -129,6 +163,10 @@
   text-align: center;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
   transform: rotate(-2deg);
+}
+
+.lockscreen-married-emphasis {
+  font-size: 1.5em;
 }
 
 .lockscreen-icons {
