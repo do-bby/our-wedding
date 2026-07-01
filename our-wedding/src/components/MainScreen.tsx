@@ -50,7 +50,7 @@ export default function MainScreen({ isMusicPlaying, onToggleMusic }: MainScreen
             <div className="lockscreen-married">
               We are getting
               <br />
-              married
+              married!
             </div>
           </div>
         </section>
