@@ -36,12 +36,12 @@ export default function GallerySection({
   initialVisibleCount = 9,
 }: GallerySectionProps) {
   const prefersReducedMotion = useReducedMotion()
-  const [expanded, setExpanded] = useState(false)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
   const [touchStartX, setTouchStartX] = useState<number | null>(null)
   const [touchDeltaX, setTouchDeltaX] = useState(0)
   const [touchStartedOnControl, setTouchStartedOnControl] = useState(false)
+  const [expanded, setExpanded] = useState(false)
 
   const galleryImages = useMemo(() => {
     if (images && images.length > 0) return images
@@ -71,9 +71,10 @@ export default function GallerySection({
   }, [images])
 
   const visibleImages = useMemo(() => {
-    if (expanded) return galleryImages
-    return galleryImages.slice(0, initialVisibleCount)
+    return expanded ? galleryImages : galleryImages.slice(0, initialVisibleCount)
   }, [expanded, galleryImages, initialVisibleCount])
+
+  const hasMoreImages = galleryImages.length > initialVisibleCount
 
   const openLightbox = (idx: number) => {
     setActiveIndex(idx)
@@ -119,8 +120,6 @@ export default function GallerySection({
     visible: { opacity: 1, y: 0 },
   } as const
 
-  const canToggle = galleryImages.length > initialVisibleCount
-
   return (
     <section className="section gallery-section" id={id}>
       <motion.div
@@ -145,22 +144,22 @@ export default function GallerySection({
               onClick={() => openLightbox(idx)}
             >
               <span className="gallery-img-frame" style={{ backgroundImage: `url(${src})` }}>
-                <img className="gallery-img" src={src} alt="" loading="lazy" />
+                <img className="gallery-img" src={src} alt="" loading="lazy" draggable={false} />
               </span>
             </button>
           ))}
         </div>
 
-        {canToggle ? (
+        {hasMoreImages ? (
           <button
             type="button"
             className="gallery-more"
-            onClick={() => setExpanded((v) => !v)}
             aria-expanded={expanded}
+            onClick={() => setExpanded((value) => !value)}
           >
-            <span className="gallery-more-text">{expanded ? '접기' : '더보기'}</span>
-            <span className={expanded ? 'gallery-more-icon is-expanded' : 'gallery-more-icon'}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            {expanded ? '접기' : '더보기'}
+            <span className={`gallery-more-icon${expanded ? ' is-expanded' : ''}`} aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>

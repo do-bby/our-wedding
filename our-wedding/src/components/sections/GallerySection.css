@@ -46,6 +46,7 @@
   overflow: hidden;
   aspect-ratio: 1 / 1;
   box-shadow: 0 6px 14px rgba(15, 18, 24, 0.08);
+  touch-action: manipulation;
 }
 
 .gallery-img-frame {
@@ -57,6 +58,8 @@
   justify-content: center;
   background-size: cover;
   background-position: center;
+  user-select: none;
+  touch-action: manipulation;
 }
 
 .gallery-img {
@@ -69,6 +72,9 @@
   object-fit: cover;
   object-position: center;
   background: transparent;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-user-drag: none;
 }
 
 .gallery-more {
